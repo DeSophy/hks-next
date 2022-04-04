@@ -1,0 +1,117 @@
+@use 'base';
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.description {
+	width: 25%;
+	text-align: right;
+
+	p {
+		font-size: 0.9rem;
+		line-height: 1.8rem;
+		margin-bottom: 3rem;
+	}
+
+	.filters {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-bottom: 1rem;
+	}
+
+	.filter {
+		display: flex;
+		width: fit-content;
+		cursor: pointer;
+
+		h4 {
+			margin-left: 1rem;
+		}
+	}
+}
+
+.transactions {
+	width: 72%;
+	// overflow: hidden;
+}
+
+.transactionsContainer {
+	display: flex;
+	justify-content: flex-start;
+	column-gap: 2%;
+	flex-wrap: wrap;
+}
+
+.transactionContainer {
+	width: 32%;
+	color: white;
+	margin-bottom: 2%;
+
+	img {
+		width: 100%;
+		display: block;
+	}
+
+	.imageContainer {
+		position: relative;
+	}
+
+	.gradient {
+		width: 100%;
+		height: 20px;
+		background-image: linear-gradient(
+			to right,
+			base.$hks-red,
+			rgba(0, 0, 0, 0)
+		);
+		position: absolute;
+		bottom: 0;
+	}
+
+	.body {
+		background-color: base.$hks-blue;
+		padding: 1.5rem;
+		min-height: 186px;
+
+		.transactionTitle {
+			font-weight: 600;
+		}
+
+		.transactionDetail {
+			font-size: 0.8rem;
+			line-height: 1.4rem;
+			margin-top: 1rem;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.description,
+	.transactions {
+		width: 100%;
+	}
+
+	// Left Side
+
+	.text {
+		display: none;
+	}
+
+	.container {
+		flex-direction: column;
+	}
+
+	.filters {
+		align-items: flex-start !important;
+	}
+
+	// Right Side
+
+	.transactionContainer {
+		width: 100%;
+	}
+}

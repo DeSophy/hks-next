@@ -1,0 +1,157 @@
+@use 'base';
+
+.footerTop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	margin-bottom: 6rem;
+}
+
+.map {
+	width: 48%;
+}
+
+%inputs {
+	border: 1px solid white;
+	background-color: rgba($color: base.$hks-blue, $alpha: 0);
+	padding: 0.5rem;
+	color: white;
+	font-size: 0.8rem;
+}
+
+%inputs-focus {
+	background-color: rgba($color: white, $alpha: 0.1);
+}
+
+.formContainer {
+	width: 48%;
+
+	form {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		column-gap: 2rem;
+		flex-wrap: wrap;
+
+		label {
+			margin-bottom: 0.5rem;
+		}
+
+		input[type='submit'] {
+			background-color: base.$hks-red;
+			border: 0;
+			appearance: none;
+			font-size: 1rem;
+			padding: 0.5rem 2rem;
+			margin-top: 0.5rem;
+			color: white;
+		}
+	}
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 47%;
+	margin-bottom: 1rem;
+
+	input {
+		@extend %inputs;
+	}
+
+	input:focus {
+		@extend %inputs-focus;
+	}
+}
+
+.area {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 1rem;
+
+	textarea {
+		@extend %inputs;
+		height: 6rem;
+	}
+
+	textarea:focus {
+		@extend %inputs-focus;
+	}
+}
+
+.footerBottom {
+	display: flex;
+	justify-content: space-between;
+	color: white;
+
+	p {
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+
+		li {
+			margin-bottom: 1rem;
+			font-size: 0.8rem;
+		}
+	}
+
+	.siteMap {
+		display: flex;
+		column-gap: 4rem;
+
+		li {
+			cursor: pointer;
+		}
+	}
+
+	.bottomColumn {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.socialMedia {
+			display: flex;
+			gap: 1rem;
+			justify-content: flex-end;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.footerTop {
+		flex-wrap: wrap;
+		row-gap: 40px;
+	}
+
+	.map,
+	.formContainer {
+		width: 100%;
+	}
+
+	.footerBottom {
+		flex-wrap: wrap;
+		row-gap: 20px;
+
+		p {
+			margin-bottom: 0;
+		}
+
+		.siteMap {
+			flex-wrap: wrap;
+		}
+	}
+
+	.bottomColumn {
+		row-gap: 20px;
+
+		.socialMedia {
+			justify-content: flex-start !important;
+		}
+	}
+}

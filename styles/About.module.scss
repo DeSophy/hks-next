@@ -1,0 +1,56 @@
+.content {
+	display: flex;
+	justify-content: space-between;
+}
+
+%column {
+	width: 48%;
+}
+
+.columnLeft {
+	@extend %column;
+	text-align: right;
+}
+
+.columnRight {
+	@extend %column;
+}
+
+.serviceTitleContainer,
+.opportunityTitleContainer {
+	display: flex;
+}
+
+.service {
+	margin-top: 1rem;
+	cursor: pointer;
+
+	p {
+		line-height: 1.8rem;
+	}
+}
+
+.serviceTitle,
+.opportunityTitle {
+	margin-left: 1rem;
+}
+
+.serviceText {
+	font-size: 0.8rem;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.content {
+		flex-wrap: wrap;
+		row-gap: 40px;
+	}
+
+	%column {
+		width: 100%;
+	}
+
+	.columnLeft {
+		text-align: left;
+	}
+}
