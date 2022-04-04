@@ -22,8 +22,8 @@ const About = () => {
 					<div className={styleAbout.columnLeft}>
 						<p>
 							Located in the heart of New York City, HKS Real Estate Advisors is
-							the nation's premier real estate advisory firm. With over $1.5
-							billion in annual transaction volume, we are committed to
+							the nation&apos;s premier real estate advisory firm. With over
+							$1.5 billion in annual transaction volume, we are committed to
 							providing our clients with the highest level of service. We pride
 							ourselves on being client advocates first and foremost, and
 							conduct ourselves with creativity and integrity. With every closed

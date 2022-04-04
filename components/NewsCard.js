@@ -4,7 +4,7 @@ const NewsCard = (props) => {
 	return (
 		<div className={styleNews.cardContainer}>
 			<div className={styleNews.card}>
-				<a target="_blank" href={props.link}>
+				<a target="_blank" rel="noreferrer" href={props.link}>
 					<img src={props.image} />
 				</a>
 
