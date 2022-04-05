@@ -5,6 +5,12 @@
 	text-align: center;
 }
 
+.teamSlider {
+	display: flex;
+	overflow-x: scroll;
+	padding-bottom: 1rem;
+}
+
 .cardContainer {
 	flex: 1 0 32%;
 	margin-right: 2%;
@@ -63,7 +69,7 @@
 
 @media screen and (max-width: 768px) {
 	.cardContainer {
-		flex: 1 1 100%;
+		flex: 0 0 100%;
 		margin-right: 0;
 	}
 

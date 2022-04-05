@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Container from './Container';
 import SectionTitle from './SectionTitle';
-import Transaction from './Transaction';
+import TransactionCard from './TransactionCard';
 import Bullet from './Bullet';
 import TransactionsList from './TransactionsList';
 import NotableTransactionsFilters from './NotableTransactionsFilters';
@@ -13,12 +13,6 @@ const NotableTransactions = () => {
 			(transaction) => transaction.category === 'Investment Sales'
 		)
 	);
-
-	// Changing transactions with bullets
-
-	// const [selectedBullet, setSelectedBullet] = useState(0);
-	const [firstTransaction, setFirstTransaction] = useState(0);
-	const [lastTransaction, setLastTransaction] = useState(6);
 
 	const resetTransactions = () => {
 		setFirstTransaction(0);
@@ -36,35 +30,6 @@ const NotableTransactions = () => {
 	// 	}
 	// };
 
-	// Responsive
-
-	const resize = () => {
-		setFirstTransaction(0);
-
-		if (window.innerWidth < 769) {
-			setLastTransaction(firstTransaction + 1);
-		} else if (window.innerWidth >= 769 && window.innerWidth < 1025) {
-			setLastTransaction(firstTransaction + 2);
-		} else {
-			setLastTransaction(firstTransaction + 6);
-		}
-	};
-
-	useEffect(() => {
-		// Resizing the screen
-
-		window.addEventListener('resize', () => {
-			resize();
-		});
-
-		// Onload
-		resize();
-
-		window.removeEventListener('resize', () => {
-			resize();
-		});
-	}, [resize]);
-
 	return (
 		<section id="notable-transactions">
 			<Container>
@@ -78,19 +43,17 @@ const NotableTransactions = () => {
 
 					<div className={styleNotableTransactions.transactions}>
 						<div className={styleNotableTransactions.transactionsContainer}>
-							{transactions
-								.slice(firstTransaction, lastTransaction)
-								.map((transaction, index) => (
-									<Transaction
-										key={transaction.address + index}
-										address={transaction.address}
-										neighbourhood={transaction.neighbourhood}
-										borough={transaction.borough}
-										type={transaction.type}
-										image={transaction.image}
-										category={transaction.category}
-									/>
-								))}
+							{transactions.map((transaction, index) => (
+								<TransactionCard
+									key={transaction.address + index}
+									address={transaction.address}
+									neighbourhood={transaction.neighbourhood}
+									borough={transaction.borough}
+									type={transaction.type}
+									image={transaction.image}
+									category={transaction.category}
+								/>
+							))}
 						</div>
 
 						{/* <div className="bullets">

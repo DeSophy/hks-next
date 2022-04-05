@@ -47,7 +47,7 @@
 }
 
 .transactionContainer {
-	width: 32%;
+	flex: 1 0 32%;
 	color: white;
 	margin-bottom: 2%;
 
@@ -90,7 +90,29 @@
 	}
 }
 
+@media screen and (max-width: 1280px) {
+	.transactionsContainer {
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+		padding-bottom: 1rem;
+	}
+
+	.transactionContainer {
+		flex: 1 0 40%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.transactionContainer {
+		flex: 1 0 49%;
+	}
+}
+
 @media screen and (max-width: 768px) {
+	.transactionContainer {
+		flex: 0 0 100%;
+	}
+
 	.description,
 	.transactions {
 		width: 100%;
@@ -111,8 +133,4 @@
 	}
 
 	// Right Side
-
-	.transactionContainer {
-		width: 100%;
-	}
 }

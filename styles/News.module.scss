@@ -5,8 +5,14 @@
 	text-align: center;
 }
 
+.newsSlider {
+	display: flex;
+	overflow-x: scroll;
+	padding-bottom: 1rem;
+}
+
 .cardContainer {
-	flex: 1 1 32%;
+	flex: 1 0 32%;
 	margin-right: 2%;
 }
 
@@ -44,6 +50,11 @@
 }
 
 @media screen and (max-width: 768px) {
+	.cardContainer {
+		flex: 0 0 100%;
+		margin-right: 0;
+	}
+
 	.card {
 		div {
 			padding-left: 0.5rem;
