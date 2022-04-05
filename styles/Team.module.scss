@@ -26,10 +26,12 @@
 		line-height: 1.8rem;
 	}
 
-	img {
+	.img {
 		border-radius: 50%;
 		margin-bottom: 30px;
 		width: 50%;
+		height: fit-content;
+		overflow: hidden;
 	}
 
 	div {
@@ -71,7 +73,7 @@
 		background-color: transparent;
 		color: white;
 
-		img {
+		.img {
 			width: 80%;
 			border: 2px solid white;
 		}

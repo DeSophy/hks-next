@@ -39,7 +39,7 @@ const Team = () => {
 		window.removeEventListener('resize', () => {
 			resize();
 		});
-	}, []);
+	}, [resize]);
 
 	return (
 		<section className="section-dark" id="team">

@@ -63,7 +63,7 @@ const NotableTransactions = () => {
 		window.removeEventListener('resize', () => {
 			resize();
 		});
-	}, []);
+	}, [resize]);
 
 	return (
 		<section id="notable-transactions">

@@ -1,6 +1,7 @@
 import Container from './Container';
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Hamburger from './Hamburger';
 import styleNav from '../styles/Nav.module.scss';
 
@@ -15,7 +16,7 @@ const Nav = () => {
 		? styleNav.headerTop
 		: styleNav.headerScroll;
 
-	const logo = headerVisibility ? 'logo-secondary.svg' : 'logo-primary.svg';
+	const logo = headerVisibility ? '/logo-secondary.svg' : '/logo-primary.svg';
 
 	useEffect(() => {
 		let options = {
@@ -57,24 +58,33 @@ const Nav = () => {
 			<header className={headerStyle}>
 				<div className={styleNav.navContainer}>
 					<div className={styleNav.nav}>
-						<img className={styleNav.logo} src={logo} />
+						<div className={styleNav.logo}>
+							<Image
+								layout="responsive"
+								width={100}
+								height={100}
+								src={logo}
+								alt="Logo"
+							/>
+						</div>
 
 						<div className={styleNav.menu}>
 							<Hamburger toggleMenu={toggleMenu} menuClass={menuClass} />
 
 							<ul className={hiddenMenuClass}>
 								<li>About</li>
-								<li>Divisions</li>
-								<Link href="/#notable-transactions" scroll={false}>
+								<li>Investment Opportunities</li>
+								<li>Capital Advisory</li>
+								<Link href="/#notable-transactions" scroll={false} passHref>
 									<li>Notable Transactions</li>
 								</Link>
-								<Link href="/#news" scroll={false}>
+								<Link href="/#news" scroll={false} passHref>
 									<li>News</li>
 								</Link>
-								<Link href="/#careers" scroll={false}>
+								<Link href="/#careers" scroll={false} passHref>
 									<li>Careers</li>
 								</Link>
-								<Link href="/#contact" scroll={false}>
+								<Link href="/#contact" scroll={false} passHref>
 									<li>Contact</li>
 								</Link>
 							</ul>

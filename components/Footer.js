@@ -37,7 +37,7 @@ const Footer = () => {
 						<div className={styleFooter.siteMap}>
 							<div>
 								<ul>
-									<Link href="/#company" scroll={false}>
+									<Link href="/#company" scroll={false} passHref>
 										<li>Company</li>
 									</Link>
 
@@ -47,24 +47,24 @@ const Footer = () => {
 										<li>Notable Transactions</li>
 									</Link>
 
-									<Link href="/#careers" scroll={false}>
+									<Link href="/#careers" scroll={false} passHref>
 										<li>Careers</li>
 									</Link>
 								</ul>
 							</div>
 							<div>
 								<ul>
-									<Link href="/#team" scroll={false}>
+									<Link href="/#team" scroll={false} passHref>
 										<li>Team</li>
 									</Link>
 
 									<li>Capital Advisory</li>
 
-									<Link href="/#news" scroll={false}>
+									<Link href="/#news" scroll={false} passHref>
 										<li>News</li>
 									</Link>
 
-									<Link href="/#contact" scroll={false}>
+									<Link href="/#contact" scroll={false} passHref>
 										<li>Contact</li>
 									</Link>
 								</ul>

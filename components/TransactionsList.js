@@ -5,7 +5,7 @@ const TransactionsList = [
 		neighbourhood: 'Times Square',
 		borough: 'Manhattan',
 		type: 'Development Site',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Investment Sales',
@@ -13,7 +13,7 @@ const TransactionsList = [
 		neighbourhood: 'Plaza District',
 		borough: 'Manhattan',
 		type: 'Office',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Investment Sales',
@@ -21,7 +21,7 @@ const TransactionsList = [
 		neighbourhood: 'East Harlem',
 		borough: 'Upper Manhattan',
 		type: 'Multifamily',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Investment Sales',
@@ -29,7 +29,7 @@ const TransactionsList = [
 		neighbourhood: 'Philadelphia Suburbs',
 		borough: 'Warminister, PA',
 		type: 'Multifamily',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Investment Sales',
@@ -37,7 +37,7 @@ const TransactionsList = [
 		neighbourhood: 'Midtown East',
 		borough: 'Manhattan',
 		type: 'Assemblage',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Investment Sales',
@@ -45,7 +45,7 @@ const TransactionsList = [
 		neighbourhood: 'South Florida',
 		borough: 'Plantation, FL',
 		type: 'Retail',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	// {
 	// 	category: 'Investment Sales',
@@ -53,7 +53,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -61,7 +61,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -69,7 +69,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -77,7 +77,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -85,7 +85,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -93,7 +93,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -101,7 +101,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -109,7 +109,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -117,7 +117,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -125,7 +125,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -133,7 +133,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Investment Sales',
@@ -141,43 +141,43 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	{
 		category: 'Capital Advisory',
 		address: 'High-Rise Apartment Building in Manhattan',
 		type: 'Refinance',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Capital Advisory',
 		address: 'Long Island City Luxury Construction',
 		type: 'Construction Loan, Ground-Up',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Capital Advisory',
 		address: 'The Sagamore Hotel, South Beach',
 		type: 'Aquisition + Renovation',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Capital Advisory',
 		address: 'Mixed-Use Asset & Multifamily Building in Manhattan',
 		type: 'Cash-out Refinance',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Capital Advisory',
 		address: 'Chinatown Office and Retail Portfolio',
 		type: 'Refinance',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	{
 		category: 'Capital Advisory',
 		address: 'Brooklyn College Student Housing',
 		type: 'FNMA Floating Rate',
-		image: 'assets/transaction-placeholder.jpg',
+		image: '/assets/transaction-placeholder.jpg',
 	},
 	// {
 	// 	category: 'Capital Advisory',
@@ -185,7 +185,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Capital Advisory',
@@ -193,7 +193,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Capital Advisory',
@@ -201,7 +201,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Capital Advisory',
@@ -209,7 +209,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Capital Advisory',
@@ -217,7 +217,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 	// {
 	// 	category: 'Capital Advisory',
@@ -225,7 +225,7 @@ const TransactionsList = [
 	// 	neighbourhood: 'Bowery',
 	// 	borough: 'Manhattan',
 	// 	type: 'Medical Office',
-	// 	image: 'assets/transaction-placeholder.jpg',
+	// 	image: '/assets/transaction-placeholder.jpg',
 	// },
 ];
 

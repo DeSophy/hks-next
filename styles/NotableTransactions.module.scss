@@ -51,13 +51,14 @@
 	color: white;
 	margin-bottom: 2%;
 
-	img {
+	.img {
 		width: 100%;
 		display: block;
 	}
 
 	.imageContainer {
 		position: relative;
+		width: 100%;
 	}
 
 	.gradient {

@@ -1,10 +1,18 @@
 import styles from '../styles/NotableTransactions.module.scss';
+import Image from 'next/image';
 
 const Transaction = (props) => {
 	return (
 		<div className={styles.transactionContainer}>
 			<div className={styles.imageContainer}>
-				<img src={props.image} />
+				<Image
+					src={props.image}
+					alt={props.address}
+					className={styles.img}
+					layout="responsive"
+					width={400}
+					height={256}
+				/>
 				<div className={styles.gradient}></div>
 			</div>
 			<div className={styles.body}>
