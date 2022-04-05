@@ -43,7 +43,7 @@ const Footer = () => {
 
 									<li>Investment Opportunities</li>
 
-									<Link href="/#notable-transactions" scroll={false}>
+									<Link href="/#notable-transactions" scroll={false} passHref>
 										<li>Notable Transactions</li>
 									</Link>
 

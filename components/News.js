@@ -35,7 +35,7 @@ const News = () => {
 
 		// Onload
 		resize();
-	}, [resize]);
+	});
 
 	return (
 		<section className="section-dark" id="news">

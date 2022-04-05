@@ -9,7 +9,7 @@ const Hero = () => {
 				className={styleHero.heroVideo}
 				autoPlay
 				loop
-				poster="assets/hks-hero-poster.jpg"
+				// poster="assets/hks-hero-poster.jpg"
 			>
 				<source src="assets/hks-hero-video.webm" type="video/webm"></source>
 			</video>
