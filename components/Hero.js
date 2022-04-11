@@ -20,11 +20,11 @@ const Hero = () => {
 					<p>Committed to Delivering the Highest Level of Service</p>
 					<ul className={styleHero.dynamicText}>
 						<li>
-							<span data-text="Investment Sales">Investment Sales</span>
+							<span data-text="Investment Sales &amp; Advisory">Investment Sales &amp; Advisory</span>
 						</li>
 						<li>
-							<span data-text="Acquisition &amp; Bridge">
-								Acquisition &amp; Bridge
+							<span data-text="Acquisition &amp; Bridge Financing">
+								Acquisition &amp; Bridge Financing
 							</span>
 						</li>
 						<li>
@@ -36,7 +36,7 @@ const Hero = () => {
 							</span>
 						</li>
 						<li>
-							<span data-text="Construction">Construction</span>
+							<span data-text="Construction Financing">Construction Financing</span>
 						</li>
 					</ul>
 				</div>

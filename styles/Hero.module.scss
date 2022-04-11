@@ -38,7 +38,7 @@
 .dynamicText li {
 	position: relative;
 	top: 0;
-	animation: slideUp 10s steps(5) infinite;
+	animation: slideUp 12.5s steps(5) infinite;
 }
 
 @keyframes slideUp {
@@ -68,7 +68,7 @@
 	width: 0;
 	overflow: hidden;
 	border-right: 2px solid base.$hks-red;
-	animation: typing 2s steps(28) infinite;
+	animation: typing 2.5s steps(28) infinite;
 }
 
 @keyframes typing {

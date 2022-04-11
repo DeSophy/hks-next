@@ -39,8 +39,15 @@ section {
 
 /* width */
 ::-webkit-scrollbar {
-	width: 5px;
-	height: 5px;
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 5px;
 }
 
 /* Track */
