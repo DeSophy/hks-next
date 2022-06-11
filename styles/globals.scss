@@ -39,15 +39,15 @@ section {
 
 /* width */
 ::-webkit-scrollbar {
-    -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 ::-webkit-scrollbar:vertical {
-    width: 5px;
+	width: 5px;
 }
 
 ::-webkit-scrollbar:horizontal {
-    height: 5px;
+	height: 5px;
 }
 
 /* Track */
@@ -71,46 +71,7 @@ section {
 // }
 
 .section-dark {
-	background: linear-gradient(270deg, base.$hks-blue, #4a263e, base.$hks-blue);
-	background-size: 400% 400%;
-
-	-webkit-animation: BackgroundColor 40s ease infinite;
-	-moz-animation: BackgroundColor 40s ease infinite;
-	animation: BackgroundColor 40s ease infinite;
-}
-
-@-webkit-keyframes BackgroundColor {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-@-moz-keyframes BackgroundColor {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-@keyframes BackgroundColor {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+	background-color: base.$hks-blue;
 }
 
 .container {
@@ -183,6 +144,57 @@ h4 {
 	font-style: italic;
 }
 
+// Buttons
+
+button {
+	border: 0;
+	appearance: none;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	margin-top: 0.5rem;
+	color: white;
+	cursor: pointer;
+}
+
+.buttonBlue {
+	background-color: base.$hks-blue;
+	border: 1px solid base.$hks-blue;
+	margin-right: 1rem;
+}
+.buttonRed {
+	background-color: base.$hks-red;
+	border: 1px solid base.$hks-red;
+}
+
+.buttonBlue:hover {
+	background-color: white !important;
+	border: 1px solid base.$hks-blue;
+	color: base.$hks-blue;
+}
+
+.buttonRed:hover {
+	background-color: white !important;
+	border: 1px solid base.$hks-red;
+	color: base.$hks-red;
+}
+
+.underlineButton {
+	position: relative;
+	font-weight: 600;
+	text-transform: uppercase;
+	width: fit-content;
+	cursor: pointer;
+}
+
+.underlineButton:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	display: block;
+	background: base.$hks-red;
+}
+
 // Sliders
 
 .sliderContainer {
@@ -229,6 +241,9 @@ h4 {
 }
 
 @media screen and (max-width: 1024px) {
+	.title-container {
+		margin-left: 0;
+	}
 }
 
 @media screen and (max-width: 768px) {

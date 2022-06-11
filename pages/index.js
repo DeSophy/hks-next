@@ -2,9 +2,10 @@ import Head from 'next/head';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Team from '../components/Team';
-import News from '../components/News';
+import Media from '../components/Media';
 import NotableTransactions from '../components/NotableTransactions';
-import Careers from '../components/Careers';
+import InvestmentOpportunities from '../components/InvestmentOpportunities';
+// import Careers from '../components/Careers';
 
 export default function Home() {
 	return (
@@ -25,9 +26,10 @@ export default function Home() {
 			<Hero />
 			<About />
 			<Team />
+			<InvestmentOpportunities />
 			<NotableTransactions />
-			<News />
-			<Careers />
+			<Media />
+			{/* <Careers /> */}
 		</>
 	);
 }

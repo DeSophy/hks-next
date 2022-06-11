@@ -8,6 +8,15 @@
 	position: relative;
 }
 
+.divisionHero {
+	color: white;
+	text-align: center;
+
+	h2 {
+		margin-bottom: 1.2rem;
+	}
+}
+
 .heroVideo {
 	position: absolute;
 	min-height: 100vh;
@@ -88,6 +97,37 @@
 		opacity: 0;
 		background-color: base.$hks-red;
 		color: base.$hks-red;
+	}
+}
+
+.trackerContainer {
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+}
+
+.tracker {
+	width: 1200px;
+	max-width: 90%;
+	margin: 0 auto;
+	color: white;
+	display: flex;
+
+	p {
+		font-size: 0.8rem;
+		line-height: normal;
+		margin-top: 1rem;
+	}
+
+	.trackerField {
+		flex: 1 0 30%;
+		margin-right: 20%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.trackerContainer {
+		display: none;
 	}
 }
 

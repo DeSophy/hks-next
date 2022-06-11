@@ -4,22 +4,22 @@ import ContactForm from './ContactForm';
 import Link from 'next/link';
 import { BsInstagram } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
-import styleFooter from '../styles/Footer.module.scss';
+import styles from '../styles/Footer.module.scss';
 
 const Footer = () => {
 	return (
-		<section className="section-dark" id="contact">
+		<section className={'section-dark ' + styles.section} id="contact">
 			<Container>
-				<div className={styleFooter.footerTop}>
-					<div className={styleFooter.map}>
+				<div className={styles.footerTop}>
+					<div className={styles.map}>
 						<Map />
 					</div>
 
 					<ContactForm />
 				</div>
 
-				<div className={styleFooter.footerBottom}>
-					<div className={styleFooter.bottomColumn}>
+				<div className={styles.footerBottom}>
+					<div className={styles.bottomColumn}>
 						<p>Contact Us</p>
 						<ul>
 							<li>(212) 254-1600</li>
@@ -31,10 +31,10 @@ const Footer = () => {
 							<li>New York, NY, 10010</li>
 						</ul>
 					</div>
-					<div className={styleFooter.bottomColumn}>
+					<div className={styles.bottomColumn}>
 						<p>Site Map</p>
 
-						<div className={styleFooter.siteMap}>
+						<div className={styles.siteMap}>
 							<div>
 								<ul>
 									<Link href="/#company" scroll={false} passHref>
@@ -72,8 +72,8 @@ const Footer = () => {
 						</div>
 					</div>
 
-					<div className={styleFooter.bottomColumn}>
-						<div className={styleFooter.socialMedia}>
+					<div className={styles.bottomColumn}>
+						<div className={styles.socialMedia}>
 							<BsInstagram color="white" size="24px" />
 							<BsLinkedin color="white" size="24px" />
 						</div>

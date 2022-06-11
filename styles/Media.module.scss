@@ -1,27 +1,50 @@
 @use 'base';
 
-.title {
-	color: white;
-	text-align: center;
+.mediaNav {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.tabButton {
+	cursor: pointer;
+	position: relative;
+}
+
+.tabButton:after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	right: 0;
+	display: block;
+	background: base.$hks-red;
+	transition: width 0.2s ease;
+	-webkit-transition: width 0.2s ease;
+}
+
+.tabButton:hover:after {
+	width: 100%;
+	left: 0;
 }
 
 .newsSlider {
 	display: flex;
 	overflow-x: scroll;
-	padding-bottom: 1rem;
+	padding-bottom: 2rem;
 }
 
 .cardContainer {
-	flex: 1 0 32%;
-	margin-right: 2%;
+	flex: 1 0 22%;
+	margin-right: 3%;
 }
 
 .card {
-	color: white;
 	text-align: left;
 
 	div {
-		padding: 1.2rem;
+		padding-top: 1.2rem;
 	}
 
 	h3 {
@@ -46,6 +69,13 @@
 
 	.date {
 		font-size: 0.8rem;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.mediaNav {
+		justify-content: left;
+		gap: 1rem;
 	}
 }
 

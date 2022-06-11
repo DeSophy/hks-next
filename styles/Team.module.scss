@@ -1,26 +1,31 @@
 @use 'base';
 
+.section {
+	background-image: url('/assets/line-right.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .title {
 	color: white;
-	text-align: center;
 }
 
 .teamSlider {
 	display: flex;
 	overflow-x: scroll;
-	padding-bottom: 1rem;
+	padding-bottom: 1.5rem;
 }
 
 .cardContainer {
-	flex: 1 0 32%;
+	flex: 1 0 23%;
 	margin-right: 2%;
 }
 
 .card {
-	padding-top: 25%;
-	padding-bottom: 25%;
+	padding: 10px;
 	background-color: white;
-	text-align: center;
+	min-height: 100%;
 
 	h3 {
 		margin-bottom: 10px;
@@ -33,31 +38,33 @@
 	}
 
 	.img {
-		border-radius: 50%;
-		margin-bottom: 30px;
-		width: 50%;
-		height: fit-content;
-		overflow: hidden;
-	}
-
-	div {
-		width: fit-content;
-		margin: 0 auto;
-	}
-
-	.bioButton {
-		position: relative;
-		font-weight: 600;
-		text-transform: uppercase;
-	}
-
-	.bioButton:after {
-		content: '';
-		position: absolute;
 		width: 100%;
-		height: 2px;
 		display: block;
-		background: base.$hks-red;
+	}
+
+	.imageContainer {
+		position: relative;
+		width: 100%;
+	}
+
+	.gradient {
+		width: 100%;
+		height: 20px;
+		background-image: linear-gradient(
+			to right,
+			base.$hks-red,
+			rgba(0, 0, 0, 0)
+		);
+		position: absolute;
+		bottom: 0;
+	}
+
+	.cardText {
+		padding: 20px;
+
+		div {
+			width: fit-content;
+		}
 	}
 }
 
@@ -71,17 +78,5 @@
 	.cardContainer {
 		flex: 0 0 100%;
 		margin-right: 0;
-	}
-
-	.card {
-		padding-top: 10%;
-		padding-bottom: 10%;
-		background-color: transparent;
-		color: white;
-
-		.img {
-			width: 80%;
-			border: 2px solid white;
-		}
 	}
 }

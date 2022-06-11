@@ -59,30 +59,38 @@ const Nav = () => {
 				<div className={styleNav.navContainer}>
 					<div className={styleNav.nav}>
 						<div className={styleNav.logo}>
-							<Image
-								layout="responsive"
-								width={100}
-								height={100}
-								src={logo}
-								alt="Logo"
-							/>
+							<Link href="/#hero" scroll={false} passHref>
+								<Image
+									layout="responsive"
+									width={100}
+									height={100}
+									src={logo}
+									alt="Logo"
+								/>
+							</Link>
 						</div>
 
 						<div className={styleNav.menu}>
 							<Hamburger toggleMenu={toggleMenu} menuClass={menuClass} />
 
 							<ul className={hiddenMenuClass}>
-								<li>About</li>
-								<li>Investment Opportunities</li>
-								<li>Capital Advisory</li>
+								<Link href="/#about" scroll={false} passHref>
+									<li>About</li>
+								</Link>
+								<Link href="/#team" scroll={false} passHref>
+									<li>Team</li>
+								</Link>
+								<Link href="/#investment-opportunities" scroll={false} passHref>
+									<li>Investment Opportunities</li>
+								</Link>
 								<Link href="/#notable-transactions" scroll={false} passHref>
 									<li>Notable Transactions</li>
 								</Link>
-								<Link href="/#news" scroll={false} passHref>
-									<li>News</li>
+								<Link href="/#resarch" scroll={false} passHref>
+									<li>Resarch</li>
 								</Link>
-								<Link href="/#careers" scroll={false} passHref>
-									<li>Careers</li>
+								<Link href="/#media" scroll={false} passHref>
+									<li>Media</li>
 								</Link>
 								<Link href="/#contact" scroll={false} passHref>
 									<li>Contact</li>

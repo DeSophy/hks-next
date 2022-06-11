@@ -1,13 +1,25 @@
 @use 'base';
 
+.section {
+	background-image: url('/assets/line-left.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .container {
 	display: flex;
 	justify-content: space-between;
 }
 
+.title {
+	color: white;
+}
+
 .description {
 	width: 25%;
 	text-align: right;
+	color: white;
 
 	p {
 		font-size: 0.9rem;
@@ -48,7 +60,6 @@
 
 .transactionContainer {
 	flex: 1 0 32%;
-	color: white;
 	margin-bottom: 2%;
 
 	.img {
@@ -74,7 +85,7 @@
 	}
 
 	.body {
-		background-color: base.$hks-blue;
+		background-color: white;
 		padding: 1.5rem;
 		min-height: 186px;
 

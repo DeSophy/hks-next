@@ -9,25 +9,30 @@ const TeamCard = (props) => {
 		>
 			{' '}
 			<div className={styles.card}>
-				<div className={styles.img}>
+				<div className={styles.imageContainer}>
 					<Image
 						src={props.photo}
 						alt={props.name}
+						className={styles.img}
 						layout="responsive"
 						width={100}
 						height={100}
 					/>
+
+					<div className={styles.gradient}></div>
 				</div>
 
-				<h3>{props.name}</h3>
-				<p>{props.title}</p>
-				<br />
+				<div className={styles.cardText}>
+					<h3>{props.name}</h3>
+					<p>{props.title}</p>
+					<br />
 
-				<p>Phone: {props.phone}</p>
-				<p>Email: {props.email}</p>
-				<br />
-				<div>
-					<p className={styles.bioButton}>Read Bio</p>
+					<p>Phone: {props.phone}</p>
+					<p>Email: {props.email}</p>
+					<br />
+					<div>
+						<p className="underlineButton">Read Bio</p>
+					</div>
 				</div>
 			</div>
 		</div>

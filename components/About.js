@@ -15,7 +15,7 @@ const About = () => {
 	};
 
 	return (
-		<section id="company">
+		<section id="about">
 			<Container>
 				<SectionTitle text="About Us" />
 				<div className={styleAbout.content}>

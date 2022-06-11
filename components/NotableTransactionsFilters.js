@@ -14,7 +14,7 @@ const NotableTransactionsFilters = (props) => {
 			)
 		);
 
-		props.resetTransactions();
+		// props.resetTransactions();
 
 		setOpenIcon(category);
 	};

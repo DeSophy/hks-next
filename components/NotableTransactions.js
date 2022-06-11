@@ -5,7 +5,7 @@ import TransactionCard from './TransactionCard';
 import Bullet from './Bullet';
 import TransactionsList from './TransactionsList';
 import NotableTransactionsFilters from './NotableTransactionsFilters';
-import styleNotableTransactions from '../styles/NotableTransactions.module.scss';
+import styles from '../styles/NotableTransactions.module.scss';
 
 const NotableTransactions = () => {
 	const [transactions, setTransactions] = useState(
@@ -14,11 +14,11 @@ const NotableTransactions = () => {
 		)
 	);
 
-	const resetTransactions = () => {
-		setFirstTransaction(0);
-		setLastTransaction(6);
-		// setSelectedBullet(0);
-	};
+	// const resetTransactions = () => {
+	// 	setFirstTransaction(0);
+	// 	setLastTransaction(6);
+	// 	// setSelectedBullet(0);
+	// };
 
 	// const transactionsHandler = (index) => {
 	// 	if (index === 0) {
@@ -31,18 +31,21 @@ const NotableTransactions = () => {
 	// };
 
 	return (
-		<section id="notable-transactions">
+		<section
+			className={'section-dark ' + styles.section}
+			id="notable-transactions"
+		>
 			<Container>
-				<SectionTitle text="Notable Transactions" />
-				<div className={styleNotableTransactions.container}>
+				<SectionTitle style={styles.title} text="Notable Transactions" />
+				<div className={styles.container}>
 					<NotableTransactionsFilters
 						setTransactions={setTransactions}
 						TransactionsList={TransactionsList}
-						resetTransactions={resetTransactions}
+						// resetTransactions={resetTransactions}
 					/>
 
-					<div className={styleNotableTransactions.transactions}>
-						<div className={styleNotableTransactions.transactionsContainer}>
+					<div className={styles.transactions}>
+						<div className={styles.transactionsContainer}>
 							{transactions.map((transaction, index) => (
 								<TransactionCard
 									key={transaction.address + index}

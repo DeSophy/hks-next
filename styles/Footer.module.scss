@@ -1,5 +1,12 @@
 @use 'base';
 
+.section {
+	background-image: url('/assets/line-right.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .footerTop {
 	display: flex;
 	justify-content: space-between;
