@@ -19,7 +19,7 @@ const TeamCard = (props) => {
 						height={100}
 					/>
 
-					<div className={styles.gradient}></div>
+					<div className="gradient"></div>
 				</div>
 
 				<div className={styles.cardText}>

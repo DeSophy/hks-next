@@ -37,31 +37,35 @@ const Footer = () => {
 						<div className={styles.siteMap}>
 							<div>
 								<ul>
-									<Link href="/#company" scroll={false} passHref>
-										<li>Company</li>
+									<Link href="/#about" scroll={false} passHref>
+										<li>About</li>
 									</Link>
 
-									<li>Investment Opportunities</li>
+									<Link
+										href="/#investment-opportunities"
+										scroll={false}
+										passHref
+									>
+										<li>Investment Opportunities</li>
+									</Link>
 
 									<Link href="/#notable-transactions" scroll={false} passHref>
 										<li>Notable Transactions</li>
 									</Link>
 
-									<Link href="/#careers" scroll={false} passHref>
-										<li>Careers</li>
+									<Link href="/#team" scroll={false} passHref>
+										<li>Team</li>
 									</Link>
 								</ul>
 							</div>
 							<div>
 								<ul>
-									<Link href="/#team" scroll={false} passHref>
-										<li>Team</li>
+									<Link href="/#research" scroll={false} passHref>
+										<li>Research</li>
 									</Link>
 
-									<li>Capital Advisory</li>
-
-									<Link href="/#news" scroll={false} passHref>
-										<li>News</li>
+									<Link href="/#media" scroll={false} passHref>
+										<li>Media</li>
 									</Link>
 
 									<Link href="/#contact" scroll={false} passHref>
@@ -74,13 +78,28 @@ const Footer = () => {
 
 					<div className={styles.bottomColumn}>
 						<div className={styles.socialMedia}>
-							<BsInstagram color="white" size="24px" />
-							<BsLinkedin color="white" size="24px" />
+							<a
+								target="_blank"
+								rel="noreferrer"
+								href="https://www.instagram.com/hksrealestateadvisors/"
+							>
+								<BsInstagram color="white" size="24px" />
+							</a>
+
+							<a
+								target="_blank"
+								rel="noreferrer"
+								href="https://www.linkedin.com/company/hks-capital-partners-llc/about/"
+							>
+								<BsLinkedin color="white" size="24px" />
+							</a>
 						</div>
 
 						<div>
 							<ul>
-								<li>Privacy Policy</li>
+								<Link href="/privacy/#privacy" scroll={false} passHref>
+									<li>Privacy Policy</li>
+								</Link>
 							</ul>
 						</div>
 					</div>

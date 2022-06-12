@@ -1,7 +1,9 @@
-import React from 'react';
+import SuccessMessage from '../components/SuccessMessage';
 
-const success = () => {
-	return <div>Form successfully submitted!</div>;
-};
-
-export default success;
+export default function Home() {
+	return (
+		<>
+			<SuccessMessage />
+		</>
+	);
+}

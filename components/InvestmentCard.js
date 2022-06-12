@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../styles/InvestmentOpportunities.module.scss';
+import styles from '../styles/InvestmentAndReport.module.scss';
 
 const InvestmentCard = (props) => {
 	return (
@@ -14,6 +14,8 @@ const InvestmentCard = (props) => {
 					width={400}
 					height={256}
 				/>
+
+				<div className="gradient"></div>
 			</div>
 
 			<div className={styles.body}>

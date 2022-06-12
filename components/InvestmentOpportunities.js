@@ -3,9 +3,9 @@ import Container from './Container';
 import SectionTitle from './SectionTitle';
 import InvestmentCard from './InvestmentCard';
 import InvestmentList from './InvestmentList';
-import styles from '../styles/InvestmentOpportunities.module.scss';
+import styles from '../styles/InvestmentAndReport.module.scss';
 
-const Careers = () => {
+const InvestmentOpportunities = () => {
 	const listings = InvestmentList;
 
 	return (
@@ -34,4 +34,4 @@ const Careers = () => {
 	);
 };
 
-export default Careers;
+export default InvestmentOpportunities;

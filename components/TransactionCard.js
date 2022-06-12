@@ -13,7 +13,7 @@ const Transaction = (props) => {
 					width={400}
 					height={256}
 				/>
-				<div className={styles.gradient}></div>
+				<div className="gradient"></div>
 			</div>
 			<div className={styles.body}>
 				<p className={styles.transactionTitle}>

@@ -14,6 +14,8 @@ const NewsCard = (props) => {
 							width={400}
 							height={256}
 						/>
+
+						<div className="gradient"></div>
 					</div>
 				</a>
 

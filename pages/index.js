@@ -5,6 +5,7 @@ import Team from '../components/Team';
 import Media from '../components/Media';
 import NotableTransactions from '../components/NotableTransactions';
 import InvestmentOpportunities from '../components/InvestmentOpportunities';
+import Research from '../components/Research';
 // import Careers from '../components/Careers';
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
 			<Team />
 			<InvestmentOpportunities />
 			<NotableTransactions />
+			<Research />
 			<Media />
 			{/* <Careers /> */}
 		</>
