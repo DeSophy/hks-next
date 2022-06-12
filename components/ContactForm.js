@@ -3,7 +3,12 @@ import styleFooter from '../styles/Footer.module.scss';
 const ContactForm = () => {
 	return (
 		<div className={styleFooter.formContainer}>
-			<form name="contact" data-netlify="true">
+			<form
+				name="contact"
+				method="POST"
+				netlify-honeypot="bot-field"
+				data-netlify="true"
+			>
 				<div className={styleFooter.field}>
 					<label>First Name</label>
 					<input type="text" id="firstName" name="firstName" />

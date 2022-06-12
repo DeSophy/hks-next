@@ -55,6 +55,7 @@ const NotableTransactions = () => {
 									type={transaction.type}
 									image={transaction.image}
 									category={transaction.category}
+									price={transaction.price}
 								/>
 							))}
 						</div>

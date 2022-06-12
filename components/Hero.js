@@ -67,13 +67,18 @@ const Hero = () => {
 					</div>
 					<div className={styles.trackerField}>
 						<p>
-							<b>Just Closed | $2,100,000</b>
+							<b>Market Report | NYC Q1 2022</b>
 						</p>
 						<p>
-							Daniel Kowalsky and Max Ralby have closed a refinance of a
-							mixed-use asset located in Newark…
+							After the depths of the pandemic in 2020 and 2021, when
+							transactions were severely depressed in number and dollar
+							volume...
 						</p>
-						<a target="_blank" rel="noreferrer" href="#">
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href="/assets/reports/HKS_Report_Q1_2022.pdf"
+						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>
 					</div>

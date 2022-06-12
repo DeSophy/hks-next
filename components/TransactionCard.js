@@ -30,7 +30,9 @@ const Transaction = (props) => {
 						{props.borough}
 					</p>
 				)}
-				<p className={styles.transactionDetail}>{props.type}</p>
+				<p className={styles.transactionDetail}>
+					{props.type} / <b>{props.price}</b>
+				</p>
 			</div>
 		</div>
 	);
