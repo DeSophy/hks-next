@@ -17,6 +17,7 @@
 
 	p {
 		font-size: 0.8rem;
+		line-height: 1.6rem;
 	}
 
 	.description {
@@ -26,6 +27,11 @@
 	.cardBottom {
 		display: flex;
 		justify-content: space-between;
+
+		.buttons {
+			display: flex;
+			gap: 1rem;
+		}
 
 		.highlights {
 			display: flex;

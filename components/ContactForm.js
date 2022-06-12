@@ -3,7 +3,7 @@ import styleFooter from '../styles/Footer.module.scss';
 const ContactForm = () => {
 	return (
 		<div className={styleFooter.formContainer}>
-			<form name="contact" netlify>
+			<form name="contact" data-netlify="true">
 				<div className={styleFooter.field}>
 					<label>First Name</label>
 					<input type="text" id="firstName" name="firstName" />
@@ -25,7 +25,9 @@ const ContactForm = () => {
 					<textarea id="message" name="message" />
 				</div>
 
-				<input type="submit" value="SEND" />
+				<button className="buttonRed" type="submit">
+					SEND
+				</button>
 			</form>
 		</div>
 	);

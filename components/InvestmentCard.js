@@ -1,14 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/InvestmentOpportunities.module.scss';
 
-const InvestmentCard = () => {
+const InvestmentCard = (props) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.img}>
 				<Image
-					src={'/assets/transaction-placeholder.jpg'}
-					alt={'props.address'}
+					src={props.photo}
+					alt={props.title}
 					layout="responsive"
 					width={400}
 					height={256}
@@ -16,33 +17,36 @@ const InvestmentCard = () => {
 			</div>
 
 			<div className={styles.body}>
-				<h4>
-					Astoria Value-Add: 34-55 32nd Street | <b>$3,900,000</b>
-				</h4>
+				<h4>{props.title}</h4>
 				<p className={styles.description}>
-					4-Story Opportunity Zone asset with 7 free-market units and 1
-					restaurant. All seven apartments are 2 bedroom-2 baths, attracting
-					middle-class young professionals and families. This corner lot retail
-					space is home to New York’s only Welsh restaurant and bar.
+					{props.description.length > 350
+						? props.description.slice(0, 350) + '...'
+						: props.description}
 				</p>
 				<div className={styles.cardBottom}>
 					<div className={styles.highlights}>
 						<div className={styles.highlight}>
-							<p className={styles.bold}>Selling Point 1</p>
-							<p>Label</p>
+							<p className={styles.bold}>{props.h1}</p>
+							<p>{props.l1}</p>
 						</div>
 						<div className={styles.highlight}>
-							<p className={styles.bold}>Selling Point 1</p>
-							<p>Label</p>
+							<p className={styles.bold}>{props.h2}</p>
+							<p>{props.l2}</p>
 						</div>
 						<div className={styles.highlight}>
-							<p className={styles.bold}>Selling Point 1</p>
-							<p>Label</p>
+							<p className={styles.bold}>{props.h3}</p>
+							<p>{props.l3}</p>
 						</div>
 					</div>
 					<div className={styles.buttons}>
-						<button className="buttonBlue">Contact Us</button>
-						<button className="buttonRed">See Flyer</button>
+						<a href="mailto:pcarillo@hks.com">
+							<button className="buttonBlue">Contact Us</button>
+						</a>
+						{props.flyer && (
+							<a target="_blank" rel="noreferrer" href={props.flyer}>
+								<button className="buttonRed">See Flyer</button>
+							</a>
+						)}
 					</div>
 				</div>
 			</div>

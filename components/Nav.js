@@ -51,6 +51,12 @@ const Nav = () => {
 		}
 	};
 
+	const closeMenu = () => {
+		setMenuClass(styleNav.menuBtnClosed);
+		setMenuOpen(false);
+		setHiddenMenuClas(styleNav.hidden);
+	};
+
 	return (
 		<>
 			<div ref={headerRef}></div>
@@ -75,25 +81,25 @@ const Nav = () => {
 
 							<ul className={hiddenMenuClass}>
 								<Link href="/#about" scroll={false} passHref>
-									<li>About</li>
+									<li onClick={() => closeMenu()}>About</li>
 								</Link>
 								<Link href="/#team" scroll={false} passHref>
-									<li>Team</li>
+									<li onClick={() => closeMenu()}>Team</li>
 								</Link>
 								<Link href="/#investment-opportunities" scroll={false} passHref>
-									<li>Investment Opportunities</li>
+									<li onClick={() => closeMenu()}>Investment Opportunities</li>
 								</Link>
 								<Link href="/#notable-transactions" scroll={false} passHref>
-									<li>Notable Transactions</li>
+									<li onClick={() => closeMenu()}>Notable Transactions</li>
 								</Link>
 								<Link href="/#resarch" scroll={false} passHref>
-									<li>Resarch</li>
+									<li onClick={() => closeMenu()}>Resarch</li>
 								</Link>
 								<Link href="/#media" scroll={false} passHref>
-									<li>Media</li>
+									<li onClick={() => closeMenu()}>Media</li>
 								</Link>
 								<Link href="/#contact" scroll={false} passHref>
-									<li>Contact</li>
+									<li onClick={() => closeMenu()}>Contact</li>
 								</Link>
 							</ul>
 						</div>
