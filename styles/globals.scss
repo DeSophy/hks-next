@@ -72,6 +72,10 @@ section {
 
 .section-dark {
 	background-color: base.$hks-blue;
+
+	.scroll-mobile-container {
+		color: white;
+	}
 }
 
 .section-gray {
@@ -253,6 +257,12 @@ button {
 	background-color: base.$hks-red;
 }
 
+.scroll-mobile-container {
+	gap: 0.5rem;
+	display: none;
+	margin-top: 1rem;
+}
+
 @media screen and (max-width: 1024px) {
 	.title-container {
 		margin-left: 0;
@@ -276,6 +286,10 @@ button {
 
 	.sliderContainer {
 		column-gap: 10px;
+	}
+
+	.scroll-mobile-container {
+		display: flex;
 	}
 }
 

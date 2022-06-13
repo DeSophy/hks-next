@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 import TransactionCard from './TransactionCard';
-import Bullet from './Bullet';
+import MobileScrollindicator from './MobileScrollindicator';
 import TransactionsList from './TransactionsList';
 import NotableTransactionsFilters from './NotableTransactionsFilters';
 import styles from '../styles/NotableTransactions.module.scss';
@@ -74,6 +74,8 @@ const NotableTransactions = () => {
 						</div> */}
 					</div>
 				</div>
+
+				<MobileScrollindicator />
 			</Container>
 		</section>
 	);

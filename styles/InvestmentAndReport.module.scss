@@ -1,5 +1,11 @@
 @use 'base';
 
+// .investmentContainer {
+// 	max-height: 700px;
+// 	overflow-y: scroll;
+// 	padding-right: 1rem;
+// } Uncomment one there is more than 5 listings
+
 .card {
 	display: flex;
 	padding-top: 2rem;
@@ -68,6 +74,8 @@
 		overflow-x: scroll;
 		overflow-y: hidden;
 		padding-bottom: 2rem;
+		max-height: fit-content;
+		padding-right: 0;
 	}
 
 	.card {

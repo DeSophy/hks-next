@@ -3,6 +3,7 @@ import Container from './Container';
 import SectionTitle from './SectionTitle';
 import ResearchCard from './ResearchCard';
 import ResearchList from './ResearchList';
+import MobileScrollindicator from './MobileScrollindicator';
 import styles from '../styles/InvestmentAndReport.module.scss';
 
 const Research = () => {
@@ -34,6 +35,8 @@ const Research = () => {
 						/>
 					))}
 				</div>
+
+				<MobileScrollindicator />
 			</Container>
 		</section>
 	);

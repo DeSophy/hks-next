@@ -3,6 +3,7 @@ import Container from './Container';
 import SectionTitle from './SectionTitle';
 import InvestmentCard from './InvestmentCard';
 import InvestmentList from './InvestmentList';
+import MobileScrollindicator from './MobileScrollindicator';
 import styles from '../styles/InvestmentAndReport.module.scss';
 
 const InvestmentOpportunities = () => {
@@ -29,6 +30,7 @@ const InvestmentOpportunities = () => {
 						/>
 					))}
 				</div>
+				<MobileScrollindicator />
 			</Container>
 		</section>
 	);

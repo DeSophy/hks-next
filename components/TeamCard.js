@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Team.module.scss';
 
 const TeamCard = (props) => {
@@ -31,7 +32,12 @@ const TeamCard = (props) => {
 					<p>Email: {props.email}</p>
 					<br />
 					<div>
-						<p className="underlineButton">Read Bio</p>
+						<p
+							onClick={() => props.button(props.index)}
+							className="underlineButton"
+						>
+							Read Bio
+						</p>
 					</div>
 				</div>
 			</div>

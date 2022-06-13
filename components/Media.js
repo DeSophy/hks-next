@@ -5,6 +5,7 @@ import NewsCard from './NewsCard';
 import NewsList from './NewsList';
 import InstagramCard from './InstagramCard';
 import InstagramList from './InstagramList';
+import MobileScrollindicator from './MobileScrollindicator';
 import styles from '../styles/Media.module.scss';
 
 const News = () => {
@@ -55,6 +56,8 @@ const News = () => {
 						))}
 					</div>
 				)}
+
+				<MobileScrollindicator />
 			</Container>
 		</section>
 	);
