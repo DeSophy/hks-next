@@ -26,9 +26,9 @@ const Footer = () => {
 
 							<li>info@hks.com</li>
 
-							<li>38 West 21st Street, 8th Floor</li>
+							<li>126 5th Avenue, 15th Floor</li>
 
-							<li>New York, NY, 10010</li>
+							<li>New York, NY, 10011</li>
 						</ul>
 					</div>
 					<div className={styles.bottomColumn}>
