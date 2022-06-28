@@ -27,6 +27,7 @@ const InvestmentOpportunities = () => {
 							h3={listing.h3}
 							l3={listing.l3}
 							flyer={listing.flyer}
+							web={listing.web}
 						/>
 					))}
 				</div>

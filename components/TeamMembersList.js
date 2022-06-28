@@ -1,5 +1,13 @@
 const teamMembers = [
 	{
+		name: `Jerry Swartz`,
+		title: `Principal and Founding Partner`,
+		phone: `(212) 254-1600`,
+		email: `jswartz@hks.com`,
+		photo: `/assets/team/jswartz.jpg`,
+		bio: `Mr. Swartz started his career in 1970 at Sonnenblick-Goldman, where he worked and developed his expertise as a loan originator until 1975, when he left to form the mortgage and Real Estate syndication firm- Pergolis & Swartz Associates Inc. Over the next 36 years he built a reputable name, and grew his firm to the size of 25 active brokers facilitating billions of dollars in transactions in mortgage origination, and related services for every form of lending and equity participation conceivable, including syndication, direct lending, construction, development, ownership, management, plus debt and equity procurement in every category of Commercial Real Estate. In April of 2011, he and his former assistant turned partner at PSA left to form HKS Capital Partners, LLC along with a former member of PSA, John Harrington. This endeavor has proven immensely successful in many ways in all forms of CRE. Primarily debt and equity procurement, direct lending, residential construction for his own account as well as investments in industrial, condo conversion, hospitality, multi-family and shopping centers.`,
+	},
+	{
 		name: `Ayush Kapahi`,
 		title: `Principal and Founding Partner`,
 		phone: `(212) 254-1600`,
@@ -24,14 +32,6 @@ const teamMembers = [
 		Among Mr. Harrington's signature deals he sourced a $32 million 10 year, non-recourse, agency loan with 5 years interest-only for a 213 unit Student Housing facility for Brooklyn College and another $27.5 million for a student housing facility in the College Park area of Maryland. In another noteworthy transaction John negotiated a $45 million refinance and renovation loan structure debt facility for an iconic South Beach Hotel in the midst of a delicate and sensitive family situation. 
 		
 		Demonstrating Mr. Harrington's breadth he has also facilitated financing for several flagged and boutique hotels, A note and B note financing for a school to multi-family conversion and enlargement in East Harlem and a multi-phase shopping center development in Florida.`,
-	},
-	{
-		name: `Jerry Swartz`,
-		title: `Principal and Founding Partner`,
-		phone: `(212) 254-1600`,
-		email: `jswartz@hks.com`,
-		photo: `/assets/team/jswartz.jpg`,
-		bio: `Mr. Swartz started his career in 1970 at Sonnenblick-Goldman, where he worked and developed his expertise as a loan originator until 1975, when he left to form the mortgage and Real Estate syndication firm- Pergolis & Swartz Associates Inc. Over the next 36 years he built a reputable name, and grew his firm to the size of 25 active brokers facilitating billions of dollars in transactions in mortgage origination, and related services for every form of lending and equity participation conceivable, including syndication, direct lending, construction, development, ownership, management, plus debt and equity procurement in every category of Commercial Real Estate. In April of 2011, he and his former assistant turned partner at PSA left to form HKS Capital Partners, LLC along with a former member of PSA, John Harrington. This endeavor has proven immensely successful in many ways in all forms of CRE. Primarily debt and equity procurement, direct lending, residential construction for his own account as well as investments in industrial, condo conversion, hospitality, multi-family and shopping centers.`,
 	},
 	{
 		name: `Michael Lee`,
@@ -131,7 +131,7 @@ const teamMembers = [
 	},
 	{
 		name: `Alex Dobosh`,
-		title: `Principal and Partner`,
+		title: `Analyst`,
 		phone: `(212) 254-1600`,
 		email: `adobosh@hks.com`,
 		photo: `/assets/team/adobosh.jpg`,

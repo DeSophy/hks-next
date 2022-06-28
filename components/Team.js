@@ -4,7 +4,8 @@ import TeamCard from './TeamCard';
 import TeamMembersList from './TeamMembersList';
 import TeamModal from './TeamModal';
 import MobileScrollindicator from './MobileScrollindicator';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import SliderContainer from './SliderContainer';
 import styles from '../styles/Team.module.scss';
 
 const Team = () => {
@@ -13,22 +14,30 @@ const Team = () => {
 
 	const [modal, setModal] = useState(false);
 
+	const [hidden, setHidden] = useState('');
+
 	const openModal = (current) => {
 		setModal(true);
 		setCurrentMember(current);
+		setHidden('hidden');
 	};
 
 	const closeModal = () => {
 		setModal(false);
+		setHidden('');
 	};
+
+	const sliderRef = useRef();
+
+	console.log(sliderRef.current);
 
 	return (
 		<section className={'section-dark ' + styles.section} id="team">
 			<Container className={styles.teamContainer}>
 				<SectionTitle style={styles.title} text="Meet Our Team" />
 
-				{!modal && (
-					<div className={styles.teamSlider}>
+				<SliderContainer hidden={hidden} slider={sliderRef.current}>
+					<div ref={sliderRef} className={styles.teamSlider}>
 						{members.map((member, index) => (
 							<TeamCard
 								key={member.name}
@@ -42,7 +51,7 @@ const Team = () => {
 							/>
 						))}
 					</div>
-				)}
+				</SliderContainer>
 
 				{modal && (
 					<TeamModal

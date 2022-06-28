@@ -1,35 +1,19 @@
-import { useState, useEffect } from 'react';
 import { BiLeftArrowCircle } from 'react-icons/bi';
 import { BiRightArrowCircle } from 'react-icons/bi';
 
-const SliderContainer = ({
-	children,
-	data,
-	firstItem,
-	setFirstItem,
-	lastItem,
-	setLastItem,
-}) => {
-	const items = data;
-
+const SliderContainer = (props) => {
 	// Slider Controls
 
 	const rightButtonHandler = () => {
-		if (lastItem < items.length) {
-			setFirstItem(firstItem + 1);
-			setLastItem(lastItem + 1);
-		}
+		props.slider.scrollLeft += 276;
 	};
 
 	const leftButtonHandler = () => {
-		if (firstItem != 0) {
-			setFirstItem(firstItem - 1);
-			setLastItem(lastItem - 1);
-		}
+		props.slider.scrollLeft -= 276;
 	};
 
 	return (
-		<div className="sliderContainer">
+		<div className={`sliderContainer ${props.hidden}`}>
 			<div className="arrow">
 				<BiLeftArrowCircle
 					onClick={leftButtonHandler}
@@ -38,7 +22,7 @@ const SliderContainer = ({
 				/>
 			</div>
 
-			<div className="slider">{children}</div>
+			<div className="slider">{props.children}</div>
 
 			<div className="arrow">
 				<BiRightArrowCircle

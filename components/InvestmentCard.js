@@ -49,6 +49,11 @@ const InvestmentCard = (props) => {
 								<button className="buttonRed">See Flyer</button>
 							</a>
 						)}
+						{props.web && (
+							<a target="_blank" rel="noreferrer" href={props.web}>
+								<button className="buttonRed">See Website</button>
+							</a>
+						)}
 					</div>
 				</div>
 			</div>

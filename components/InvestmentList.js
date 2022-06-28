@@ -1,5 +1,17 @@
 const InvestmentList = [
 	{
+		title: `109-111 West 24th Street`,
+		description: `On behalf of ownership, HKS Real Estate Advisors is pleased to present for sale, Chelsea office property. Ideally located a block away from Madison Square Park and the Flatiron District, and also a few steps away from the 1, B, D, F, M trains, plus the PATH. The area is known for its plentiful culinary and shopping amenities and some of the city's most walkable streets. The property has seven stories and six are for office use, plus one on the ground floor for retail.`,
+		photo: `/assets/listings/111-West-24th-Street.jpg`,
+		h1: `±46,299 SQ.FT.`,
+		l1: `RBA`,
+		h2: `50'`,
+		l2: `Frontage`,
+		h3: `7`,
+		l3: `# of Stories`,
+		web: `https://111w24.com`,
+	},
+	{
 		title: `Rare Development Opportunity / 354 West 52nd Street`,
 		description: `On behalf of ownership, HKS Real Estate Advisors is pleased to present, 354 West 52nd Street for sale. The block-through lot is ideally located on 52nd Street between 8th and 9th avenues in the Clinton-Midtown West neighborhood of Manhattan. The development site is currently operated as a parking lot and measures approximately 9,540 square feet. The residential and community facility FAR is 4.20 providing for a potential floor area of 40,068 square feet. The site has 75 feet of frontage on 52nd Street and 20 feet of frontage on 51st Street.`,
 		photo: `/assets/listings/354-West-52nd-Street.jpg`,
