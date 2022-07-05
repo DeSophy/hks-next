@@ -31,7 +31,9 @@ const Hero = () => {
 							</span>
 						</li>
 						<li>
-							<span data-text="Permanent Finance">Permanent Finance</span>
+							<span data-text="Long Term Fixed and Floating Rate Financing">
+								Long Term Fixed and Floating Rate Financing
+							</span>
 						</li>
 						<li>
 							<span data-text="Mezzanine and Private Equity">

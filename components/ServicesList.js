@@ -8,7 +8,7 @@ const services = [
 		description: `With the exception of cash flowing assets purchased on a Cap Rate basis, the 'acquisition' of Real Estate must be rooted in the fundamentals of assessing the RISK to potential upside value. Our firm, which utilizes a comprehensive analysis for the determination and viability of an acquisition, will provide a thorough and well vetted strategy. Regardless if we facilitate transactions through conventional institutions or private equity, we're entering a favorable treasury index environment, compressed cap rates, and the reemergence of the CMBS market for delivering effective capital for leveraging propositions.`,
 	},
 	{
-		title: 'Permanent Finance',
+		title: 'Long Term Fixed and Floating Rate Financing',
 		description: `Regardless if you are the occasional CRE investor or large scale portfolio management organization, our firm comprises a team of seasoned consultants with a thorough understanding of the capital markets. With a focus on Multi-Family, Office, Retail, Mixed-Use, Industrial, Hotel, single purpose property or owner occupied scenarios; we have a proven track record facilitating transactions for every type of lending and equity participation conceivable, including syndication. We take an analytical approach to underwriting, with a proven track record for repositioning debt, acquisition or 'value-add' situations.`,
 	},
 	{
