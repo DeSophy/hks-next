@@ -5,11 +5,11 @@ const SliderContainer = (props) => {
 	// Slider Controls
 
 	const rightButtonHandler = () => {
-		props.slider.scrollLeft += 276;
+		props.slider.current.scrollLeft += 276;
 	};
 
 	const leftButtonHandler = () => {
-		props.slider.scrollLeft -= 276;
+		props.slider.current.scrollLeft -= 276;
 	};
 
 	return (

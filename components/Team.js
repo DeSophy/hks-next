@@ -36,7 +36,7 @@ const Team = () => {
 			<Container className={styles.teamContainer}>
 				<SectionTitle style={styles.title} text="Meet Our Team" />
 
-				<SliderContainer hidden={hidden} slider={sliderRef.current}>
+				<SliderContainer hidden={hidden} slider={sliderRef}>
 					<div ref={sliderRef} className={styles.teamSlider}>
 						{members.map((member, index) => (
 							<TeamCard

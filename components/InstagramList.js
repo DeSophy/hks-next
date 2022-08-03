@@ -1,19 +1,19 @@
 const InstagramList = [
 	{
 		image: '/assets/sm/sm1.jpeg',
-		text: 'Charles Yellen has closed a 10-year fixed-rate refinance of a 139-unit Co-Op building in Westchester, New York.',
+		text: 'Michael Lee has closed a refinance of a one-story, 18,000 square-foot commercial property comprised of three retail units in Queens, New York.',
 	},
 	{
 		image: '/assets/sm/sm2.jpeg',
-		text: 'Ayush Kapahi closed a refinance of a newly-built 68,462 square foot building comprised of 101 affordable residential units in Bronx, New York.',
+		text: 'Average rents in Manhattan surged past the $5,000 mark (median rents reached $4,050) this week for the first time, according to the article published by The Real Deal.',
 	},
 	{
 		image: '/assets/sm/sm3.jpeg',
-		text: 'Alex Dobosh @alex_dobosh closed a refinance of a 4,400 square foot multifamily building comprised of 8 residential units in Brooklyn, NY.',
+		text: 'Michael Lee closed an acquisition loan for the purchase of two mixed-use buildings comprised of four commercial units and 32 residential units in East Village, New York.',
 	},
 	{
 		image: '/assets/sm/sm4.jpeg',
-		text: 'Jay Stern closed a refinance of a five-story, 2,550 square-foot mixed-use asset comprised of two commercial units and 18 residential units in New York, NY.',
+		text: 'Ayush Kapahi has closed a refinance of a newly developed 8-story multifamily building comprised of 59 affordable residential units, 2,374 square feet of retail space, and 672 square feet of community facility space in Bronx, NY.',
 	},
 ];
 
