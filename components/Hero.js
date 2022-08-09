@@ -53,11 +53,12 @@ const Hero = () => {
 				<div className={styles.tracker}>
 					<div className={styles.trackerField}>
 						<p>
-							<b>Closed | $7,000,000</b>
+							<b>Closed | $12,000,000</b>
 						</p>
 						<p>
-							Charles Yellen has closed a 10-year fixed-rate refinance of a
-							139-unit Co-Op building in Westchester, New York.
+							John Harrington has closed a refinance of three contiguous
+							properties comprised of 14 residential units and 2 commercial
+							units in Harlem, New York.
 						</p>
 						<a
 							target="_blank"
