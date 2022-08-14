@@ -1,6 +1,6 @@
 const InvestmentList = [
 	{
-		title: `NEW YORK CITY / Q2 2022 / Market Report`,
+		title: `NEW YORK CITY / Q1 2022 / Market Report`,
 		description: `Recovery - That is the key word for NYC investment sales in 2022. After the depths of the pandemic in 2020 and 2021, when transactions were severely depressed in number and dollar volume, the market this year is showing strong signs of getting back on track.`,
 		photo: `/assets/reports/q1-2022-cover.jpg`,
 		dollar: `$5.7B`,
