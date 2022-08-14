@@ -63,7 +63,7 @@ const Hero = () => {
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="https://www.instagram.com/p/CeofCC7sFOF/?utm_source=ig_web_copy_link"
+							href="https://www.instagram.com/p/Cg47SxPLe5S/"
 						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>
