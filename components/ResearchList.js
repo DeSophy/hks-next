@@ -1,4 +1,21 @@
-const InvestmentList = [
+const ResearchList = [
+	{
+		title: `NEW YORK CITY / Q2 2022 / Market Report`,
+		description: `The second quarter has been one of dichotomies. On the one hand, NYC experienced a bumper period for investment sales volume, clocking at $8.5B for the quarter ending June 30. This was driven by a flurry of activity as investors raced to beat the looming expiration of the 421a tax abatement program and also the expectation of rising inflation.`,
+		photo: `/assets/reports/q2-2022-cover.jpg`,
+		dollar: `$8.5B`,
+		dollarVsLast: `+49%`,
+		dollarVsYear: `+143%`,
+		transaction: `782`,
+		transactionVsLast: `+13%`,
+		transactionVsYear: `+69%`,
+		property: `926`,
+		propertyVsLast: `+13%`,
+		propertyVsYear: `+59%`,
+		qLast: `Q1 22`,
+		qYear: `Q2 21`,
+		link: `/assets/reports/HKS_Report_Q2_2022.pdf`,
+	},
 	{
 		title: `NEW YORK CITY / Q1 2022 / Market Report`,
 		description: `Recovery - That is the key word for NYC investment sales in 2022. After the depths of the pandemic in 2020 and 2021, when transactions were severely depressed in number and dollar volume, the market this year is showing strong signs of getting back on track.`,
@@ -18,4 +35,4 @@ const InvestmentList = [
 	},
 ];
 
-export default InvestmentList;
+export default ResearchList;
