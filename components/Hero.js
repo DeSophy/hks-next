@@ -70,17 +70,17 @@ const Hero = () => {
 					</div>
 					<div className={styles.trackerField}>
 						<p>
-							<b>Market Report | NYC Q1 2022</b>
+							<b>Market Report | NYC Q2 2022</b>
 						</p>
 						<p>
-							After the depths of the pandemic in 2020 and 2021, when
-							transactions were severely depressed in number and dollar
-							volume...
+							The second quarter has been one of dichotomies. On the one hand,
+							NYC experienced a bumper period for investment sales volume,
+							clocking at $8.5B for the quarter ending June 30....
 						</p>
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="/assets/reports/HKS_Report_Q1_2022.pdf"
+							href="/assets/reports/HKS_Report_Q2_2022.pdf"
 						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>
