@@ -53,17 +53,17 @@ const Hero = () => {
 				<div className={styles.tracker}>
 					<div className={styles.trackerField}>
 						<p>
-							<b>Closed | $12,000,000</b>
+							<b>Closed | $14,850,000</b>
 						</p>
 						<p>
-							John Harrington has closed a refinance of three contiguous
-							properties comprised of 14 residential units and 2 commercial
-							units in Harlem, New York.
+							Ayush Kapahi closed a refinance of a four-property portfolio
+							comprised of 3 commercial spaces and 15 residential units spread
+							across 16,000 sf in New York, NY.
 						</p>
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="https://www.instagram.com/p/Cg47SxPLe5S/"
+							href="https://www.instagram.com/p/Chm_8IkLQn9/"
 						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>
