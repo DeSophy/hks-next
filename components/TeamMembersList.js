@@ -115,7 +115,7 @@ const teamMembers = [
 	},
 	{
 		name: `James Stavrakis`,
-		title: `Analyst`,
+		title: `Associate`,
 		phone: `(212) 254-1600 x110`,
 		email: `jstavrakis@hks.com`,
 		photo: `/assets/team/jstavrakis.jpg`,
