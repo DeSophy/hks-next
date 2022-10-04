@@ -92,8 +92,8 @@ const Nav = () => {
 								<Link href="/#notable-transactions" scroll={false} passHref>
 									<li onClick={() => closeMenu()}>Notable Transactions</li>
 								</Link>
-								<Link href="/#resarch" scroll={false} passHref>
-									<li onClick={() => closeMenu()}>Resarch</li>
+								<Link href="/#research" scroll={false} passHref>
+									<li onClick={() => closeMenu()}>Research</li>
 								</Link>
 								<Link href="/#media" scroll={false} passHref>
 									<li onClick={() => closeMenu()}>Media</li>
