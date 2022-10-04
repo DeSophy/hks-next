@@ -30,7 +30,7 @@ const InvestmentList = [
 		h1: `8`,
 		l1: `Total Units`,
 		h2: `±6,480 Sq.Ft.`,
-		l2: `Bulding Size`,
+		l2: `Building Size`,
 		h3: `$240,396`,
 		l3: `Gross Income`,
 		flyer: `/assets/listings/34-55-32nd-Street-flyer.pdf`,

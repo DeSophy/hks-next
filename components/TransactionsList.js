@@ -166,7 +166,7 @@ const TransactionsList = [
 	{
 		category: 'Capital Advisory',
 		address: 'The Sagamore Hotel, South Beach',
-		type: 'Aquisition + Renovation',
+		type: 'Acquisition + Renovation',
 		image: '/assets/transactions/ca/ca3.jpg',
 		price: '$45,000,000',
 	},
