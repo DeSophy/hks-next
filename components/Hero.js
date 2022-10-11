@@ -53,17 +53,16 @@ const Hero = () => {
 				<div className={styles.tracker}>
 					<div className={styles.trackerField}>
 						<p>
-							<b>Closed | $14,850,000</b>
+							<b>Closed | $148,000,000</b>
 						</p>
 						<p>
-							Ayush Kapahi closed a refinance of a four-property portfolio
-							comprised of 3 commercial spaces and 15 residential units spread
-							across 16,000 sf in New York, NY.
+							Ayush Kapahi procured a lump sum loan for the construction of a
+							two-tower, 559-unit residence in Hialeah, Florida.
 						</p>
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="https://www.instagram.com/p/Chm_8IkLQn9/"
+							href="https://www.instagram.com/p/CjYL5A4MCrc/"
 						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>

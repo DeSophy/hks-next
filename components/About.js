@@ -32,7 +32,7 @@ const About = () => {
 						</p>
 						<br />
 						<p>
-							The principals at HKS have closed over $25 Billion in transactions
+							The principals at HKS have closed over $25 billion in transactions
 							to date. Since our inception, we have been able to provide the
 							best-in-class solutions with seamless execution regardless of
 							complexity - often succeeding in closing transactions that others
