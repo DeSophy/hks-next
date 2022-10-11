@@ -98,14 +98,6 @@ const teamMembers = [
 		bio: `Jay Stern, a Rutgers Business School graduate in Finance at the Rutgers University – New Brunswick campus, joined Pergolis & Swartz Associates in 2010 as an origination intern. Subsequently, he was recruited by HKS to join them with the dual roles of analyst and originator on all asset classes. In 2017, Jay was chosen as one of the Top Young Professionals in Commercial Observer's annual 25 top lenders and debt brokers under 35. Jay, who is also fluent in Polish, is determined to fulfill the needs of his clients through a combination of diligence and understanding of their individualized, unique needs.`,
 	},
 	{
-		name: `Daniel Kowalsky`,
-		title: `Director of Financial Services`,
-		phone: `(212) 254-1600`,
-		email: `dkowalsky@hks.com`,
-		photo: `/assets/team/dkowalsky.jpg`,
-		bio: `Daniel Kowalsky is a Director of Financial Services at HKS Capital Partners. He is responsible for the underwriting, analysis, and due diligence process of the firm's deal production. To date, Daniel has assisted in the closing of over $300 million in transactions, among all asset types and transaction variations. Prior to joining HKS as an intern in 2015, Daniel attended Binghamton University, where he received a BA in Economics.`,
-	},
-	{
 		name: `Arthur Safdeye`,
 		title: `Analyst`,
 		phone: `(212) 254-1600`,
