@@ -131,7 +131,7 @@ const teamMembers = [
 	},
 	{
 		name: `Antonio Lulli`,
-		title: `Real Estate Financial Analyst`,
+		title: `Associate Director`,
 		phone: `(212) 254-1600 x 112`,
 		email: `alulli@hks.com`,
 		photo: `/assets/team/alulli.png`,
