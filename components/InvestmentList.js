@@ -59,18 +59,6 @@ const InvestmentList = [
 		l3: `Zoning`,
 		flyer: ``,
 	},
-	{
-		title: `Atlanta Single Family Rental Portfolio`,
-		description: `The portfolio consists of attractive and well-maintained homes with modern features and amenities which attract a	qualified and stable tenant base. The assets enjoy a 96% occupancy rate and with an average monthly rent of $1,603, they don't suffer from affordability issues and retain significant rent growth upside potential.`,
-		photo: `/assets/listings/atlanta.jpg`,
-		h1: `$480,888`,
-		l1: `Gross Rent`,
-		h2: `$1,603`,
-		l2: `Average Monthly Rent`,
-		h3: `$343,722`,
-		l3: `NOI`,
-		flyer: `/assets/listings/Atlanta-Single-Family-Rental-Portfolio-OM.pdf`,
-	},
 ];
 
 export default InvestmentList;
