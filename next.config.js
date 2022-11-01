@@ -1,7 +1,7 @@
 module.exports = {
 	reactStrictMode: false,
 	experimental: {
-		externalDir: false,
+		externalDir: true,
 	},
 
 	// Potential new config flag:
