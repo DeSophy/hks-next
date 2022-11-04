@@ -69,7 +69,9 @@ const InvestmentList = [
 		l2: `Average Monthly Rent`,
 		h3: `$343,722`,
 		l3: `NOI`,
-		flyer: `/assets/listings/Atlanta-Single-Family-Rental-Portfolio-OM.pdf`,
+		// flyer: `/assets/listings/Atlanta-Single-Family-Rental-Portfolio-OM.pdf`,
+		confiBroker: `/assets/listings/Atlanta SFR_Confidentiality & Co-Broke Agreement.pdf`,
+		confiPrincipal: `/assets/listings/Atlanta SFR_Confidentiality Agreement_SP_October 2022.pdf`,
 	},
 ];
 

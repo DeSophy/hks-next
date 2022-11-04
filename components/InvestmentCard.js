@@ -40,6 +40,7 @@ const InvestmentCard = (props) => {
 							<p>{props.l3}</p>
 						</div>
 					</div>
+
 					<div className={styles.buttons}>
 						<a href="mailto:pcarillo@hks.com">
 							<button className="buttonBlue">Contact Us</button>
@@ -52,6 +53,16 @@ const InvestmentCard = (props) => {
 						{props.web && (
 							<a target="_blank" rel="noreferrer" href={props.web}>
 								<button className="buttonRed">See Website</button>
+							</a>
+						)}
+						{props.confiBroker && (
+							<a target="_blank" rel="noreferrer" href={props.confiBroker}>
+								<button className="buttonRed">Broker</button>
+							</a>
+						)}
+						{props.confiPrincipal && (
+							<a target="_blank" rel="noreferrer" href={props.confiPrincipal}>
+								<button className="buttonRed">Principal</button>
 							</a>
 						)}
 					</div>

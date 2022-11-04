@@ -28,6 +28,8 @@ const InvestmentOpportunities = () => {
 							l3={listing.l3}
 							flyer={listing.flyer}
 							web={listing.web}
+							confiBroker={listing.confiBroker}
+							confiPrincipal={listing.confiPrincipal}
 						/>
 					))}
 				</div>
