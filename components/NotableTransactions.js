@@ -5,7 +5,6 @@ import Container from './Container';
 import SectionTitle from './SectionTitle';
 import TransactionCard from './TransactionCard';
 import MobileScrollindicator from './MobileScrollindicator';
-import TransactionsList from './TransactionsList';
 import NotableTransactionsFilters from './NotableTransactionsFilters';
 
 // styles

@@ -11,8 +11,10 @@ import { createClient } from 'contentful';
 
 export const getStaticProps = async () => {
 	const client = createClient({
-		space: process.env.space,
-		accessToken: process.env.accessToken,
+		space: 'kepefmor44ex',
+		accessToken: 'DV4iPheBWoMWs1ajGtMZJv-6qIQkkeUJEqJ5XkAf-F0',
+		// space: process.env.space,
+		// accessToken: process.env.accessToken,
 	});
 
 	const team = await client.getEntries({
