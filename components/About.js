@@ -1,8 +1,12 @@
+import { useState } from 'react';
+
+// components
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 import Service from './Service';
 import ServicesList from './ServicesList';
-import { useState } from 'react';
+
+// styles
 import styleAbout from '../styles/About.module.scss';
 
 const About = () => {

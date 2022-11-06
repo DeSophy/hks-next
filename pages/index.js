@@ -7,8 +7,39 @@ import NotableTransactions from '../components/NotableTransactions';
 import InvestmentOpportunities from '../components/InvestmentOpportunities';
 import Research from '../components/Research';
 // import Careers from '../components/Careers';
+import { createClient } from 'contentful';
 
-export default function Home() {
+export const getStaticProps = async () => {
+	const client = createClient({
+		space: process.env.space,
+		accessToken: process.env.accessToken,
+	});
+
+	const team = await client.getEntries({
+		content_type: 'teamMember',
+		order: 'sys.createdAt',
+	});
+
+	const listing = await client.getEntries({
+		content_type: 'listing',
+		order: 'sys.createdAt',
+	});
+
+	const transaction = await client.getEntries({
+		content_type: 'transaction',
+		order: 'sys.createdAt',
+	});
+
+	return {
+		props: {
+			teamMembers: team.items,
+			listings: listing.items,
+			notableTransactions: transaction.items,
+		},
+	};
+};
+
+export default function Home({ teamMembers, listings, notableTransactions }) {
 	return (
 		<>
 			<Head>
@@ -26,9 +57,9 @@ export default function Home() {
 
 			<Hero />
 			<About />
-			<Team />
-			<InvestmentOpportunities />
-			<NotableTransactions />
+			<Team teamMembers={teamMembers} />
+			<InvestmentOpportunities listings={listings} />
+			<NotableTransactions notableTransactions={notableTransactions} />
 			<Research />
 			<Media />
 			{/* <Careers /> */}

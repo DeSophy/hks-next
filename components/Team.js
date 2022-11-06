@@ -1,15 +1,17 @@
+import { useState, useRef } from 'react';
+
+// Components
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 import TeamCard from './TeamCard';
-import TeamMembersList from './TeamMembersList';
 import TeamModal from './TeamModal';
 import MobileScrollindicator from './MobileScrollindicator';
-import { useState, useRef } from 'react';
 import SliderContainer from './SliderContainer';
+
+// styles
 import styles from '../styles/Team.module.scss';
 
-const Team = () => {
-	const members = TeamMembersList;
+const Team = ({ teamMembers }) => {
 	const [currentMember, setCurrentMember] = useState(0);
 
 	const [modal, setModal] = useState(false);
@@ -29,8 +31,6 @@ const Team = () => {
 
 	const sliderRef = useRef();
 
-	console.log(sliderRef.current);
-
 	return (
 		<section className={'section-dark ' + styles.section} id="team">
 			<Container className={styles.teamContainer}>
@@ -38,14 +38,14 @@ const Team = () => {
 
 				<SliderContainer hidden={hidden} slider={sliderRef}>
 					<div ref={sliderRef} className={styles.teamSlider}>
-						{members.map((member, index) => (
+						{teamMembers.map((member, index) => (
 							<TeamCard
-								key={member.name}
-								name={member.name}
-								title={member.title}
-								phone={member.phone}
-								email={member.email}
-								photo={member.photo}
+								key={member.sys.id}
+								name={member.fields.name}
+								title={member.fields.title}
+								phone={member.fields.phone}
+								email={member.fields.email}
+								photo={member.fields.photo}
 								index={index}
 								button={openModal}
 							/>
@@ -55,12 +55,12 @@ const Team = () => {
 
 				{modal && (
 					<TeamModal
-						name={members[currentMember].name}
-						title={members[currentMember].title}
-						bio={members[currentMember].bio}
-						phone={members[currentMember].phone}
-						email={members[currentMember].email}
-						photo={members[currentMember].photo}
+						name={teamMembers[currentMember].fields.name}
+						title={teamMembers[currentMember].fields.title}
+						bio={teamMembers[currentMember].fields.bio}
+						phone={teamMembers[currentMember].fields.phone}
+						email={teamMembers[currentMember].fields.email}
+						photo={teamMembers[currentMember].fields.photo}
 						close={closeModal}
 					/>
 				)}

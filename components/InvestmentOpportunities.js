@@ -1,14 +1,13 @@
-import { useState } from 'react';
+// Components
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 import InvestmentCard from './InvestmentCard';
-import InvestmentList from './InvestmentList';
 import MobileScrollindicator from './MobileScrollindicator';
+
+// styles
 import styles from '../styles/InvestmentAndReport.module.scss';
 
-const InvestmentOpportunities = () => {
-	const listings = InvestmentList;
-
+const InvestmentOpportunities = ({ listings }) => {
 	return (
 		<section id="investment-opportunities">
 			<Container>
@@ -16,20 +15,20 @@ const InvestmentOpportunities = () => {
 				<div className={styles.investmentContainer}>
 					{listings.map((listing) => (
 						<InvestmentCard
-							key={listing.title}
-							title={listing.title}
-							description={listing.description}
-							photo={listing.photo}
-							h1={listing.h1}
-							l1={listing.l1}
-							h2={listing.h2}
-							l2={listing.l2}
-							h3={listing.h3}
-							l3={listing.l3}
-							flyer={listing.flyer}
-							web={listing.web}
-							confiBroker={listing.confiBroker}
-							confiPrincipal={listing.confiPrincipal}
+							key={listing.sys.id}
+							title={listing.fields.title}
+							description={listing.fields.description}
+							photo={listing.fields.photo}
+							h1={listing.fields.h1}
+							l1={listing.fields.l1}
+							h2={listing.fields.h2}
+							l2={listing.fields.l2}
+							h3={listing.fields.h3}
+							l3={listing.fields.l3}
+							flyer={listing.fields.flyer}
+							web={listing.fields.web}
+							confiBroker={listing.fields.confiBroker}
+							confiPrincipal={listing.fields.confiPrincipal}
 						/>
 					))}
 				</div>

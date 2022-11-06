@@ -35,6 +35,11 @@ section {
 	}
 }
 
+::selection {
+	background: base.$hks-red;
+	color: white;
+}
+
 // Scrollbar
 
 /* width */

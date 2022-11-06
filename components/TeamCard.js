@@ -12,7 +12,7 @@ const TeamCard = (props) => {
 			<div className={styles.card}>
 				<div className={styles.imageContainer}>
 					<Image
-						src={props.photo}
+						src={'https:' + props.photo.fields.file.url}
 						alt={props.name}
 						className={styles.img}
 						layout="responsive"

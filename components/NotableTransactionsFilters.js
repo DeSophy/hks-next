@@ -9,8 +9,8 @@ const NotableTransactionsFilters = (props) => {
 
 	const setCategory = (category) => {
 		props.setTransactions(
-			props.TransactionsList.filter(
-				(transaction) => transaction.category === category
+			props.notableTransactions.filter(
+				(transaction) => transaction.fields.category === category
 			)
 		);
 

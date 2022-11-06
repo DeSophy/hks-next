@@ -1,8 +1,11 @@
-import Container from './Container';
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
+// Components
 import Hamburger from './Hamburger';
+
+// Styles
 import styleNav from '../styles/Nav.module.scss';
 
 const Nav = () => {

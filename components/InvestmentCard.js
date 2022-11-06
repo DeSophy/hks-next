@@ -8,7 +8,7 @@ const InvestmentCard = (props) => {
 		<div className={styles.card}>
 			<div className={styles.img}>
 				<Image
-					src={props.photo}
+					src={'https:' + props.photo.fields.file.url}
 					alt={props.title}
 					layout="responsive"
 					width={400}
@@ -46,7 +46,11 @@ const InvestmentCard = (props) => {
 							<button className="buttonBlue">Contact Us</button>
 						</a>
 						{props.flyer && (
-							<a target="_blank" rel="noreferrer" href={props.flyer}>
+							<a
+								target="_blank"
+								rel="noreferrer"
+								href={'https:' + props.flyer.fields.file.url}
+							>
 								<button className="buttonRed">See Flyer</button>
 							</a>
 						)}
@@ -56,12 +60,20 @@ const InvestmentCard = (props) => {
 							</a>
 						)}
 						{props.confiBroker && (
-							<a target="_blank" rel="noreferrer" href={props.confiBroker}>
+							<a
+								target="_blank"
+								rel="noreferrer"
+								href={'https:' + props.confiBroker.fields.file.url}
+							>
 								<button className="buttonRed">Broker</button>
 							</a>
 						)}
 						{props.confiPrincipal && (
-							<a target="_blank" rel="noreferrer" href={props.confiPrincipal}>
+							<a
+								target="_blank"
+								rel="noreferrer"
+								href={'https:' + props.confiPrincipal.fields.file.url}
+							>
 								<button className="buttonRed">Principal</button>
 							</a>
 						)}

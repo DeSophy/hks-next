@@ -11,7 +11,7 @@ const TeamModal = (props) => {
 			</div>
 			<div className={styles.modalImage}>
 				<Image
-					src={props.photo}
+					src={'https:' + props.photo.fields.file.url}
 					alt={props.name}
 					className={styles.img}
 					layout="responsive"

@@ -6,7 +6,7 @@ const Transaction = (props) => {
 		<div className={styles.transactionContainer}>
 			<div className={styles.imageContainer}>
 				<Image
-					src={props.image}
+					src={'https:' + props.image.fields.file.url}
 					alt={props.address}
 					className={styles.img}
 					layout="responsive"

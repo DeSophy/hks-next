@@ -1,7 +1,8 @@
-import { useState } from 'react';
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 import { BiPlus } from 'react-icons/bi';
+
+// Styles
 import styleAbout from '../styles/About.module.scss';
 
 const Careers = () => {

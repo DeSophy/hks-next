@@ -1,34 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+
+// components
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 import TransactionCard from './TransactionCard';
 import MobileScrollindicator from './MobileScrollindicator';
 import TransactionsList from './TransactionsList';
 import NotableTransactionsFilters from './NotableTransactionsFilters';
+
+// styles
 import styles from '../styles/NotableTransactions.module.scss';
 
-const NotableTransactions = () => {
+const NotableTransactions = ({ notableTransactions }) => {
 	const [transactions, setTransactions] = useState(
-		TransactionsList.filter(
-			(transaction) => transaction.category === 'Investment Sales'
+		notableTransactions.filter(
+			(transaction) => transaction.fields.category === 'Investment Sales'
 		)
 	);
-
-	// const resetTransactions = () => {
-	// 	setFirstTransaction(0);
-	// 	setLastTransaction(6);
-	// 	// setSelectedBullet(0);
-	// };
-
-	// const transactionsHandler = (index) => {
-	// 	if (index === 0) {
-	// 		resetTransactions();
-	// 	} else {
-	// 		setFirstTransaction(index * lastTransaction);
-	// 		setLastTransaction(index * lastTransaction + lastTransaction);
-	// 		setSelectedBullet(index);
-	// 	}
-	// };
 
 	return (
 		<section
@@ -40,22 +28,21 @@ const NotableTransactions = () => {
 				<div className={styles.container}>
 					<NotableTransactionsFilters
 						setTransactions={setTransactions}
-						TransactionsList={TransactionsList}
-						// resetTransactions={resetTransactions}
+						notableTransactions={notableTransactions}
 					/>
 
 					<div className={styles.transactions}>
 						<div className={styles.transactionsContainer}>
-							{transactions.map((transaction, index) => (
+							{transactions.map((transaction) => (
 								<TransactionCard
-									key={transaction.address + index}
-									address={transaction.address}
-									neighbourhood={transaction.neighbourhood}
-									borough={transaction.borough}
-									type={transaction.type}
-									image={transaction.image}
-									category={transaction.category}
-									price={transaction.price}
+									key={transaction.sys.id}
+									address={transaction.fields.address}
+									neighbourhood={transaction.fields.neighbourhood}
+									borough={transaction.fields.borough}
+									type={transaction.fields.type}
+									image={transaction.fields.image}
+									category={transaction.fields.category}
+									price={transaction.fields.price}
 								/>
 							))}
 						</div>

@@ -1,3 +1,4 @@
+// Styles
 import styleFooter from '../styles/Footer.module.scss';
 
 const ContactForm = () => {
