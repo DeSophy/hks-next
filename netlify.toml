@@ -1,12 +1,4 @@
-# [[redirects]]
-# from = "/*"
-# to = "/index.html"
-# status = 200
-
-[build]
-  command = "next build"
-  functions = "netlify/functions"
-  publish = ".next"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
