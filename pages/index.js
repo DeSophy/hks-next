@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Team from '../components/Team';
-import Media from '../components/Media';
+import News from '../components/News';
 import NotableTransactions from '../components/NotableTransactions';
 import InvestmentOpportunities from '../components/InvestmentOpportunities';
 import Research from '../components/Research';
@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
 
 	const team = await client.getEntries({
 		content_type: 'teamMember',
-		order: 'sys.createdAt',
+		order: 'fields.order',
 	});
 
 	const listing = await client.getEntries({
@@ -32,16 +32,41 @@ export const getStaticProps = async () => {
 		order: 'sys.createdAt',
 	});
 
+	const news = await client.getEntries({
+		content_type: 'news',
+		// order: 'sys.createdAt',
+	});
+
+	const research = await client.getEntries({
+		content_type: 'research',
+		// order: 'sys.createdAt',
+	});
+
+	const latestClosing = await client.getEntries({
+		content_type: 'latestClosing',
+		// order: 'sys.createdAt',
+	});
+
 	return {
 		props: {
 			teamMembers: team.items,
 			listings: listing.items,
 			notableTransactions: transaction.items,
+			news: news.items,
+			research: research.items,
+			latestClosing: latestClosing.items,
 		},
 	};
 };
 
-export default function Home({ teamMembers, listings, notableTransactions }) {
+export default function Home({
+	teamMembers,
+	listings,
+	notableTransactions,
+	news,
+	research,
+	latestClosing,
+}) {
 	return (
 		<>
 			<Head>
@@ -57,13 +82,13 @@ export default function Home({ teamMembers, listings, notableTransactions }) {
 				<link rel="icon" href="/favicon.jpg" />
 			</Head>
 
-			<Hero />
+			<Hero research={research} latestClosing={latestClosing} />
 			<About />
 			<Team teamMembers={teamMembers} />
 			<InvestmentOpportunities listings={listings} />
 			<NotableTransactions notableTransactions={notableTransactions} />
-			<Research />
-			<Media />
+			<Research research={research} />
+			<News news={news} />
 			{/* <Careers /> */}
 		</>
 	);

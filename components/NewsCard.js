@@ -8,7 +8,7 @@ const NewsCard = (props) => {
 				<a target="_blank" rel="noreferrer" href={props.link}>
 					<div className={styles.img}>
 						<Image
-							src={props.image}
+							src={'https:' + props.image.fields.file.url}
 							alt={props.title}
 							layout="responsive"
 							width={400}
