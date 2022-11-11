@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+// Components
 import Container from './Container';
+
+// Styles
 import styles from '../styles/Hero.module.scss';
 
-const Hero = () => {
+const Hero = ({ research, latestClosing }) => {
 	return (
 		<section className={styles.hero} id="hero">
 			<video
@@ -53,33 +54,26 @@ const Hero = () => {
 				<div className={styles.tracker}>
 					<div className={styles.trackerField}>
 						<p>
-							<b>Closed | $148,000,000</b>
+							<b>Closed | {latestClosing[0].fields.amount}</b>
 						</p>
-						<p>
-							Ayush Kapahi procured a lump sum loan for the construction of a
-							two-tower, 559-unit residence in Hialeah, Florida.
-						</p>
+						<p>{latestClosing[0].fields.text.slice(0, 120) + '...'}</p>
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="https://www.instagram.com/p/CjYL5A4MCrc/"
+							href={latestClosing[0].fields.link}
 						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>
 					</div>
 					<div className={styles.trackerField}>
 						<p>
-							<b>Market Report | NYC Q2 2022</b>
+							<b>{research[0].fields.title}</b>
 						</p>
-						<p>
-							The second quarter has been one of dichotomies. On the one hand,
-							NYC experienced a bumper period for investment sales volume,
-							clocking at $8.5B for the quarter ending June 30....
-						</p>
+						<p>{research[0].fields.description.slice(0, 120) + '...'}</p>
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="/assets/reports/HKS_Report_Q2_2022.pdf"
+							href={'https:' + research[0].fields.link.fields.file.url}
 						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>

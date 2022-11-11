@@ -1,37 +1,36 @@
-import { useState } from 'react';
+// Components
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 import ResearchCard from './ResearchCard';
-import ResearchList from './ResearchList';
 import MobileScrollindicator from './MobileScrollindicator';
+
+// Styles
 import styles from '../styles/InvestmentAndReport.module.scss';
 
-const Research = () => {
-	const reports = ResearchList;
-
+const Research = ({ research }) => {
 	return (
 		<section className="section-gray" id="research">
 			<Container>
 				<SectionTitle text="Research" />
 				<div className={styles.investmentContainer}>
-					{reports.map((report) => (
+					{research.map((report) => (
 						<ResearchCard
-							key={report.title}
-							title={report.title}
-							description={report.description}
-							photo={report.photo}
-							dollar={report.dollar}
-							dollarVsLast={report.dollarVsLast}
-							dollarVsYear={report.dollarVsYear}
-							transaction={report.transaction}
-							transactionVsLast={report.transactionVsLast}
-							transactionVsYear={report.transactionVsYear}
-							property={report.property}
-							propertyVsLast={report.propertyVsLast}
-							propertyVsYear={report.propertyVsYear}
-							qLast={report.qLast}
-							qYear={report.qYear}
-							link={report.link}
+							key={report.sys.id}
+							title={report.fields.title}
+							description={report.fields.description}
+							photo={report.fields.photo}
+							dollar={report.fields.dollar}
+							dollarVsLast={report.fields.dollarVsLast}
+							dollarVsYear={report.fields.dollarVsYear}
+							transaction={report.fields.transaction}
+							transactionVsLast={report.fields.transactionVsLast}
+							transactionVsYear={report.fields.transactionVsYear}
+							property={report.fields.property}
+							propertyVsLast={report.fields.propertyVsLast}
+							propertyVsYear={report.fields.propertyVsYear}
+							qLast={report.fields.qLast}
+							qYear={report.fields.qYear}
+							link={report.fields.link}
 						/>
 					))}
 				</div>
