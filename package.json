@@ -8,6 +8,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@netlify/plugin-nextjs": "^4.28.6",
 		"contentful": "^9.2.9",
 		"instagram-web-api": "^2.2.2",
 		"mapbox-gl": "^2.7.1",
