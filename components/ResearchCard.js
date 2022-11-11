@@ -8,7 +8,7 @@ const ResearchCard = (props) => {
 		<div className={styles.card}>
 			<div className={styles.img}>
 				<Image
-					src={'https:' + props.photo.fields.file.url}
+					src={props.photo}
 					alt={props.title}
 					layout="responsive"
 					width={504}
@@ -62,11 +62,7 @@ const ResearchCard = (props) => {
 						</div>
 					</div>
 					<div className={styles.buttons}>
-						<a
-							target="_blank"
-							rel="noreferrer"
-							href={'https:' + props.link.fields.file.url}
-						>
+						<a target="_blank" rel="noreferrer" href={props.link}>
 							<button className="buttonRed">Download Report</button>
 						</a>
 					</div>
@@ -77,3 +73,16 @@ const ResearchCard = (props) => {
 };
 
 export default ResearchCard;
+
+// 							dollar={report.dollar}
+// 							dollarVsLast={report.dollarVsLast}
+// 							dollarVsYear={report.dollarVsYear}
+// 							transaction={report.transaction}
+// 							transactionVsLast={report.transactionVsLast}
+// 							transactionVsYear={report.transactionVsYear}
+// 							property={report.property}
+// 							propertyVsLast={report.propertyVsLast}
+// 							propertyVsYear={report.propertyVsYear}
+// 							qLast={report.qLast}
+// 							qYear={report.qYear}
+// 							link={report.link}

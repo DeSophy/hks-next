@@ -1,10 +1,9 @@
-// Components
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import Container from './Container';
-
-// Styles
 import styles from '../styles/Hero.module.scss';
 
-const Hero = ({ research, latestClosing }) => {
+const Hero = () => {
 	return (
 		<section className={styles.hero} id="hero">
 			<video
@@ -54,26 +53,33 @@ const Hero = ({ research, latestClosing }) => {
 				<div className={styles.tracker}>
 					<div className={styles.trackerField}>
 						<p>
-							<b>Closed | {latestClosing[0].fields.amount}</b>
+							<b>Closed | $148,000,000</b>
 						</p>
-						<p>{latestClosing[0].fields.text.slice(0, 120) + '...'}</p>
+						<p>
+							Ayush Kapahi procured a lump sum loan for the construction of a
+							two-tower, 559-unit residence in Hialeah, Florida.
+						</p>
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href={latestClosing[0].fields.link}
+							href="https://www.instagram.com/p/CjYL5A4MCrc/"
 						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>
 					</div>
 					<div className={styles.trackerField}>
 						<p>
-							<b>{research[0].fields.title}</b>
+							<b>Market Report | NYC Q2 2022</b>
 						</p>
-						<p>{research[0].fields.description.slice(0, 120) + '...'}</p>
+						<p>
+							The second quarter has been one of dichotomies. On the one hand,
+							NYC experienced a bumper period for investment sales volume,
+							clocking at $8.5B for the quarter ending June 30....
+						</p>
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href={'https:' + research[0].fields.link.fields.file.url}
+							href="/assets/reports/HKS_Report_Q2_2022.pdf"
 						>
 							<p className="underlineButton">MORE INFO</p>
 						</a>
