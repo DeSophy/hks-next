@@ -11,10 +11,8 @@ import { createClient } from 'contentful';
 
 export const getStaticProps = async () => {
 	const client = createClient({
-		space: 'kepefmor44ex',
-		accessToken: 'DV4iPheBWoMWs1ajGtMZJv-6qIQkkeUJEqJ5XkAf-F0',
-		// space: process.env.space,
-		// accessToken: process.env.accessToken,
+		space: process.env.space,
+		accessToken: process.env.accessToken,
 	});
 
 	const team = await client.getEntries({
@@ -42,11 +40,6 @@ export const getStaticProps = async () => {
 		// order: 'sys.createdAt',
 	});
 
-	const latestClosing = await client.getEntries({
-		content_type: 'latestClosing',
-		// order: 'sys.createdAt',
-	});
-
 	return {
 		props: {
 			teamMembers: team.items,
@@ -54,7 +47,6 @@ export const getStaticProps = async () => {
 			notableTransactions: transaction.items,
 			news: news.items,
 			research: research.items,
-			latestClosing: latestClosing.items,
 		},
 	};
 };
@@ -65,7 +57,6 @@ export default function Home({
 	notableTransactions,
 	news,
 	research,
-	latestClosing,
 }) {
 	return (
 		<>

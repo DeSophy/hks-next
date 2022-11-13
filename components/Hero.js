@@ -11,9 +11,7 @@ const Hero = ({ research }) => {
 		data: instagram,
 		isPending,
 		error,
-	} = useInstagramFeed(
-		'IGQVJYUXVLRjVpZAzdYdnkyMVNQeU5qVzhqWVByakR0eXhUWWl2djJVVFJHODdMZAjdfTmtkTkhJQTRQNHlCYlduLXhBQmJIWUVVWTV0U2RpV0UwZATBNeThjV0hJdm9zX3YzUkg5TEFfMWVEZAWdlZA1RnZAAZDZD'
-	);
+	} = useInstagramFeed(process.env.instagramToken);
 
 	// Getting the post where price is greater than $8,000,000
 
