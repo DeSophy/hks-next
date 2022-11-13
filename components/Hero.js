@@ -39,11 +39,11 @@ const Hero = ({ research }) => {
 		<section className={styles.hero} id="hero">
 			<video
 				className={styles.heroVideo}
-				autoPlay
 				loop
 				poster="assets/hks-hero-poster.jpg"
+				autoPlay
 			>
-				<source src="assets/hks-hero-video.webm" type="video/webm"></source>
+				<source src="assets/hks-hero-video.webm" type="video/webm" />
 			</video>
 
 			<Container>

@@ -22,6 +22,7 @@ const About = () => {
 		<section id="about">
 			<Container>
 				<SectionTitle text="About Us" />
+
 				<div className={styleAbout.content}>
 					<div className={styleAbout.columnLeft}>
 						<p>
