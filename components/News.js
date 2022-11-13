@@ -1,18 +1,26 @@
 import { useState } from 'react';
+import { useInstagramFeed } from '../hooks/useInstagramFeed';
 
 // Components
 import Container from './Container';
 import SectionTitle from './SectionTitle';
 import NewsCard from './NewsCard';
 import InstagramCard from './InstagramCard';
-import InstagramList from './InstagramList';
 import MobileScrollindicator from './MobileScrollindicator';
 
 // Styles
 import styles from '../styles/Media.module.scss';
 
 const News = ({ news }) => {
-	const instagram = InstagramList;
+	const {
+		data: instagram,
+		isPending,
+		error,
+	} = useInstagramFeed(
+		'IGQVJYUXVLRjVpZAzdYdnkyMVNQeU5qVzhqWVByakR0eXhUWWl2djJVVFJHODdMZAjdfTmtkTkhJQTRQNHlCYlduLXhBQmJIWUVVWTV0U2RpV0UwZATBNeThjV0hJdm9zX3YzUkg5TEFfMWVEZAWdlZA1RnZAAZDZD'
+	);
+
+	// console.log(data);
 
 	const [showNews, setShowNews] = useState(true);
 
@@ -49,13 +57,21 @@ const News = ({ news }) => {
 
 				{!showNews && (
 					<div className={styles.newsSlider}>
-						{instagram.map((article, index) => (
-							<InstagramCard
-								key={index}
-								image={article.image}
-								text={article.text}
-							/>
-						))}
+						{isPending && <p>Loading Instagram</p>}
+						{error && <p>Could not load instagram</p>}
+						{instagram &&
+							instagram
+								.slice(0, 4)
+								.map((post) => (
+									<InstagramCard
+										key={post.id}
+										media={post.media_url}
+										media_type={post.media_type}
+										caption={post.caption}
+										permalink={post.permalink}
+										timestamp={post.timestamp}
+									/>
+								))}
 					</div>
 				)}
 

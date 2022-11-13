@@ -82,7 +82,7 @@ export default function Home({
 				<link rel="icon" href="/favicon.jpg" />
 			</Head>
 
-			<Hero research={research} latestClosing={latestClosing} />
+			<Hero research={research} />
 			<About />
 			<Team teamMembers={teamMembers} />
 			<InvestmentOpportunities listings={listings} />

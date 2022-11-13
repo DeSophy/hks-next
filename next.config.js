@@ -6,7 +6,14 @@ module.exports = {
 	// Potential new config flag:
 	disableExperimentalFeaturesWarning: true,
 	images: {
-		domains: ['images.ctfassets.net'],
+		domains: [
+			'images.ctfassets.net',
+			'scontent-sin6-1.cdninstagram.com',
+			'scontent-sin6-2.cdninstagram.com',
+			'scontent-sin6-3.cdninstagram.com',
+			'scontent.cdninstagram.com',
+			'scontent-sin6-4.cdninstagram.com',
+		],
 	},
 	env: {
 		space: process.env.CONTENTFUL_SPACE_ID,

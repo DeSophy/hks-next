@@ -13,6 +13,7 @@
 		"instagram-web-api": "^2.2.2",
 		"mapbox-gl": "^2.7.1",
 		"next": "^12.1.2",
+		"next-videos": "^1.5.0",
 		"react": "^18.0.0-rc.3",
 		"react-dom": "^18.0.0-rc.3",
 		"react-icons": "^4.3.1",
