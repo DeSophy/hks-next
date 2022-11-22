@@ -27,7 +27,7 @@ const Hero = ({ research }) => {
 				.split(',')
 				.join('');
 			let postNum = parseInt(post);
-			if (postNum < 8000000) {
+			if (typeof postNum != 'number' && postNum < 8000000) {
 				index++;
 
 				break;
