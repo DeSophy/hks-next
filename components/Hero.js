@@ -1,21 +1,21 @@
 // Components
-import Container from './Container';
-import { useInstagramFeed } from '../hooks/useInstagramFeed';
+import Container from './Container'
+import { useInstagramFeed } from '../hooks/useInstagramFeed'
 
 // Styles
-import styles from '../styles/Hero.module.scss';
+import styles from '../styles/Hero.module.scss'
 
 const Hero = ({ research }) => {
 	// Fetching instagram posts
 	const {
 		data: instagram,
 		isPending,
-		error,
-	} = useInstagramFeed(process.env.instagramToken);
+		error
+	} = useInstagramFeed(process.env.instagramToken)
 
 	// Getting the post where price is greater than $8,000,000
 
-	const index = 0;
+	const index = 0
 
 	if (instagram) {
 		for (let i = 0; i < instagram.length; i++) {
@@ -25,25 +25,25 @@ const Hero = ({ research }) => {
 				.toString()
 				.slice(10)
 				.split(',')
-				.join('');
-			let postNum = parseInt(post);
+				.join('')
+			let postNum = parseInt(post)
 			if (typeof postNum != 'number' && postNum < 8000000) {
-				index++;
+				index++
 
-				break;
+				break
 			}
 		}
 	}
 
 	return (
-		<section className={styles.hero} id="hero">
+		<section className={styles.hero} id='hero'>
 			<video
 				className={styles.heroVideo}
 				loop
-				poster="assets/hks-hero-poster.jpg"
+				poster='assets/hks-hero-poster.jpg'
 				autoPlay
 			>
-				<source src="assets/hks-hero-video.webm" type="video/webm" />
+				<source src='assets/hks-hero-video.webm' type='video/webm' />
 			</video>
 
 			<Container>
@@ -52,27 +52,27 @@ const Hero = ({ research }) => {
 					<p>Committed to Delivering the Highest Level of Service</p>
 					<ul className={styles.dynamicText}>
 						<li>
-							<span data-text="Investment Sales &amp; Advisory">
+							<span data-text='Investment Sales &amp; Advisory'>
 								Investment Sales &amp; Advisory
 							</span>
 						</li>
 						<li>
-							<span data-text="Acquisition &amp; Bridge Financing">
+							<span data-text='Acquisition &amp; Bridge Financing'>
 								Acquisition &amp; Bridge Financing
 							</span>
 						</li>
 						<li>
-							<span data-text="Long Term Fixed and Floating Rate Financing">
+							<span data-text='Long Term Fixed and Floating Rate Financing'>
 								Long Term Fixed and Floating Rate Financing
 							</span>
 						</li>
 						<li>
-							<span data-text="Mezzanine and Private Equity">
+							<span data-text='Mezzanine and Private Equity'>
 								Mezzanine and Private Equity
 							</span>
 						</li>
 						<li>
-							<span data-text="Construction Financing">
+							<span data-text='Construction Financing'>
 								Construction Financing
 							</span>
 						</li>
@@ -102,11 +102,11 @@ const Hero = ({ research }) => {
 									...
 								</p>
 								<a
-									target="_blank"
-									rel="noreferrer"
+									target='_blank'
+									rel='noreferrer'
 									href={instagram[index].permalink}
 								>
-									<p className="underlineButton">MORE INFO</p>
+									<p className='underlineButton'>MORE INFO</p>
 								</a>
 							</>
 						)}
@@ -117,17 +117,17 @@ const Hero = ({ research }) => {
 						</p>
 						<p>{research[0].fields.description.slice(0, 120) + '...'}</p>
 						<a
-							target="_blank"
-							rel="noreferrer"
+							target='_blank'
+							rel='noreferrer'
 							href={'https:' + research[0].fields.link.fields.file.url}
 						>
-							<p className="underlineButton">MORE INFO</p>
+							<p className='underlineButton'>MORE INFO</p>
 						</a>
 					</div>
 				</div>
 			</div>
 		</section>
-	);
-};
+	)
+}
 
-export default Hero;
+export default Hero

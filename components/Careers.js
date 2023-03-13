@@ -1,24 +1,18 @@
-import Container from './Container';
-import SectionTitle from './SectionTitle';
-import { BiPlus } from 'react-icons/bi';
+import Container from './Container'
+import SectionTitle from './SectionTitle'
+import { BiPlus } from 'react-icons/bi'
+import Link from 'next/link'
 
 // Styles
-import styleAbout from '../styles/About.module.scss';
+import styles from '../styles/About.module.scss'
 
-const Careers = () => {
-	const opportunities = [
-		{ position: 'Investment Sales Associate' },
-		{ position: 'Commercial Finance Associate' },
-		{ position: 'Commercial Mortgage Broker' },
-		{ position: 'Internship Program' },
-	];
-
+const Careers = ({ careers }) => {
 	return (
-		<section id="careers">
+		<section id='careers' className={styles.careers}>
 			<Container>
-				<SectionTitle text="Work With Us" />
-				<div className={styleAbout.content}>
-					<div className={styleAbout.columnLeft}>
+				<SectionTitle text='Work With Us' />
+				<div className={styles.content}>
+					<div className={styles.columnLeft}>
 						<p>
 							At HKS, we seek a wide assortment of people from different
 							backgrounds, universities and degree disciplines- the more diverse
@@ -27,7 +21,7 @@ const Careers = () => {
 							pursue individuals who can validate the following:
 						</p>
 						<br />
-						<p className="italic">
+						<p className='italic'>
 							- Impeccable communication skills
 							<br />- Drive and ambition
 							<br />- Sound judgment
@@ -38,7 +32,7 @@ const Careers = () => {
 							<br />- Numeracy
 						</p>
 					</div>
-					<div className={styleAbout.columnRight}>
+					<div className={styles.columnRight}>
 						<p>
 							To be considered for one of the positions enumerated below, please
 							send a resume and a short cover letter to employment@hks.com. Only
@@ -48,14 +42,21 @@ const Careers = () => {
 						<br />
 						<h3>Current Opportunities</h3>
 						<div>
-							{opportunities.map((opportunity, index) => (
+							{careers.map(career => (
 								<div
-									key={opportunity.position + index}
-									className={styleAbout.opportunityTitleContainer}
+									key={career.sys.id}
+									className={styles.opportunityTitleContainer}
 								>
-									<BiPlus color="#e63122" size="24px" />
-									<h4 className={styleAbout.opportunityTitle}>
-										{opportunity.position}
+									<BiPlus color='#e63122' size='24px' />
+
+									<h4 className={styles.opportunityTitle}>
+										<a
+											href={'https:' + career.fields.file.fields.file.url}
+											target='_blank'
+											rel='noreferrer'
+										>
+											{career.fields.title}
+										</a>
 									</h4>
 								</div>
 							))}
@@ -64,7 +65,7 @@ const Careers = () => {
 				</div>
 			</Container>
 		</section>
-	);
-};
+	)
+}
 
-export default Careers;
+export default Careers
