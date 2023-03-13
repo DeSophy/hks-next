@@ -21,8 +21,8 @@ export const getStaticProps = async () => {
 	})
 
 	const listing = await client.getEntries({
-		content_type: 'listing',
-		order: 'sys.createdAt'
+		content_type: 'listing'
+		// order: 'sys.createdAt'
 	})
 
 	const transaction = await client.getEntries({
