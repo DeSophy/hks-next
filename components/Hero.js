@@ -15,7 +15,7 @@ const Hero = ({ research }) => {
 
 	// Getting the post where price is greater than $8,000,000
 
-	const index = 0
+	let index = 0
 
 	if (instagram) {
 		for (let i = 0; i < instagram.length; i++) {

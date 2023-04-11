@@ -1,30 +1,26 @@
-import { useState, useEffect, useRef } from 'react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const Container = ({ children }) => {
-	const [animated, setAnimated] = useState(false);
-	const containerStyle = animated ? 'animatedContainer' : 'hiddenContainer';
+	// Scroll Animation
 
-	const container = useRef();
+	const options = {
+		root: null,
+		rootMargin: '10%',
+		threshold: 0
+	}
 
-	useEffect(() => {
-		let options = {
-			root: null,
-			rootMargin: '10%',
-			threshold: 0,
-		};
-
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => setAnimated(entry.isIntersecting));
-		}, options);
-
-		observer.observe(container.current);
-	}, []);
+	const [targetRef, isIntersecting] = useIntersectionObserver(options)
 
 	return (
-		<div ref={container} className={`container ${containerStyle}`}>
+		<div
+			ref={targetRef}
+			className={`container ${
+				isIntersecting ? 'animatedContainer' : 'hiddenContainer'
+			}`}
+		>
 			{children}
 		</div>
-	);
-};
+	)
+}
 
-export default Container;
+export default Container

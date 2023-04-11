@@ -1,6 +1,7 @@
-import { useRef, useEffect, useState } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 // Components
 import Hamburger from './Hamburger'
@@ -10,31 +11,7 @@ import styleNav from '../styles/Nav.module.scss'
 
 const Nav = () => {
 	// Scrolling Header
-
-	const [headerVisibility, setHeaderVisibility] = useState(true)
-
-	const headerRef = useRef()
-
-	const headerStyle = headerVisibility
-		? styleNav.headerTop
-		: styleNav.headerScroll
-
-	const logo = headerVisibility ? '/logo-secondary.svg' : '/logo-primary.svg'
-
-	useEffect(() => {
-		let options = {
-			root: null,
-			rootMargin: '100px',
-			threshold: 1.0
-		}
-
-		const observer = new IntersectionObserver(entries => {
-			const entry = entries[0]
-			setHeaderVisibility(entry.isIntersecting)
-		}, options)
-
-		observer.observe(headerRef.current)
-	}, [])
+	const [targetRef, isIntersecting] = useIntersectionObserver()
 
 	// Mobile Menu
 
@@ -61,10 +38,10 @@ const Nav = () => {
 	}
 
 	return (
-		<>
-			<div ref={headerRef}></div>
-
-			<header className={headerStyle}>
+		<nav ref={targetRef}>
+			<div
+				className={isIntersecting ? styleNav.headerTop : styleNav.headerScroll}
+			>
 				<div className={styleNav.navContainer}>
 					<div className={styleNav.nav}>
 						<div className={styleNav.logo}>
@@ -73,7 +50,9 @@ const Nav = () => {
 									layout='responsive'
 									width={100}
 									height={100}
-									src={logo}
+									src={
+										isIntersecting ? '/logo-secondary.svg' : '/logo-primary.svg'
+									}
 									alt='Logo'
 								/>
 							</Link>
@@ -111,8 +90,8 @@ const Nav = () => {
 						</div>
 					</div>
 				</div>
-			</header>
-		</>
+			</div>
+		</nav>
 	)
 }
 

@@ -1,21 +1,21 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
 // styles
-import styles from '../styles/Media.module.scss';
+import styles from '../styles/Media.module.scss'
 
-const NewsCard = (props) => {
-	const date = new Date(props.timestamp).toUTCString();
+const NewsCard = props => {
+	const date = new Date(props.timestamp).toUTCString()
 
 	return (
 		<div className={styles.cardContainer}>
 			<div className={styles.card}>
-				<a target="_blank" rel="noreferrer" href={props.permalink}>
+				<a target='_blank' rel='noreferrer' href={props.permalink}>
 					<div className={styles.img}>
 						{props.media_type == 'IMAGE' ? (
 							<Image
 								src={props.media}
 								alt={props.title}
-								layout="responsive"
+								layout='responsive'
 								width={400}
 								height={400}
 							/>
@@ -43,7 +43,7 @@ const NewsCard = (props) => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default NewsCard;
+export default NewsCard

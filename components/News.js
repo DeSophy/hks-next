@@ -1,31 +1,31 @@
-import { useState } from 'react';
-import { useInstagramFeed } from '../hooks/useInstagramFeed';
+import { useState } from 'react'
+import { useInstagramFeed } from '../hooks/useInstagramFeed'
 
 // Components
-import Container from './Container';
-import SectionTitle from './SectionTitle';
-import NewsCard from './NewsCard';
-import InstagramCard from './InstagramCard';
-import MobileScrollindicator from './MobileScrollindicator';
+import Container from './Container'
+import SectionTitle from './SectionTitle'
+import NewsCard from './NewsCard'
+import InstagramCard from './InstagramCard'
+import MobileScrollindicator from './MobileScrollindicator'
 
 // Styles
-import styles from '../styles/Media.module.scss';
+import styles from '../styles/Media.module.scss'
 
 const News = ({ news }) => {
 	const {
 		data: instagram,
 		isPending,
-		error,
-	} = useInstagramFeed(process.env.instagramToken);
+		error
+	} = useInstagramFeed(process.env.instagramToken)
 
 	// console.log(data);
 
-	const [showNews, setShowNews] = useState(true);
+	const [showNews, setShowNews] = useState(true)
 
 	return (
-		<section id="media">
+		<section id='media'>
 			<Container>
-				<SectionTitle style={styles.title} text="Media" />
+				<SectionTitle style={styles.title} text='Media' />
 				<div className={styles.mediaNav}>
 					<h4 className={styles.tabButton} onClick={() => setShowNews(true)}>
 						In The News
@@ -38,7 +38,7 @@ const News = ({ news }) => {
 
 				{showNews && (
 					<div className={styles.newsSlider}>
-						{news.map((article) => (
+						{news.map(article => (
 							<NewsCard
 								key={article.sys.id}
 								image={article.fields.image}
@@ -60,7 +60,7 @@ const News = ({ news }) => {
 						{instagram &&
 							instagram
 								.slice(0, 4)
-								.map((post) => (
+								.map(post => (
 									<InstagramCard
 										key={post.id}
 										media={post.media_url}
@@ -76,7 +76,7 @@ const News = ({ news }) => {
 				<MobileScrollindicator />
 			</Container>
 		</section>
-	);
-};
+	)
+}
 
-export default News;
+export default News
