@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 // styles
 import styles from '../styles/Media.module.scss'

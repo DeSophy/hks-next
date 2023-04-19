@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 // Components
@@ -79,6 +79,9 @@ const Nav = () => {
 								</Link>
 								<Link href='/#media' scroll={false} passHref>
 									<li onClick={() => closeMenu()}>Media</li>
+								</Link>
+								<Link href='/rates/#rates' scroll={false} passHref>
+									<li onClick={() => closeMenu()}>Index Rates</li>
 								</Link>
 								<Link href='/#careers' scroll={false} passHref>
 									<li onClick={() => closeMenu()}>Careers</li>

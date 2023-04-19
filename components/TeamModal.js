@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiX } from 'react-icons/bi';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from '../styles/Team.module.scss';
 
 const TeamModal = (props) => {

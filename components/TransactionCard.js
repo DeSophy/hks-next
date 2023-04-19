@@ -1,5 +1,5 @@
 import styles from '../styles/NotableTransactions.module.scss';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const Transaction = (props) => {
 	return (

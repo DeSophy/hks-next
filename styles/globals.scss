@@ -268,6 +268,18 @@ button {
 	margin-top: 1rem;
 }
 
+// Index Rates
+
+.rates {
+	margin-top: 150px;
+	background-color: white;
+
+	iframe {
+		width: 100%;
+		height: 1300px;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.title-container {
 		margin-left: 0;
@@ -275,6 +287,14 @@ button {
 
 	.arrow {
 		display: none;
+	}
+
+	// Index Rates
+
+	.rates {
+		iframe {
+			height: 1050px;
+		}
 	}
 }
 
@@ -299,6 +319,12 @@ button {
 
 	.scroll-mobile-container {
 		display: flex;
+	}
+
+	.rates {
+		iframe {
+			height: 800px;
+		}
 	}
 }
 
