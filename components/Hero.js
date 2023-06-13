@@ -7,33 +7,33 @@ import styles from '../styles/Hero.module.scss'
 
 const Hero = ({ research }) => {
 	// Fetching instagram posts
-	const {
-		data: instagram,
-		isPending,
-		error
-	} = useInstagramFeed(process.env.instagramToken)
+	// const {
+	// 	data: instagram,
+	// 	isPending,
+	// 	error
+	// } = useInstagramFeed(process.env.instagramToken)
 
-	// Getting the post where price is greater than $8,000,000
+	// // Getting the post where price is greater than $8,000,000
 
-	let index = 0
+	// let index = 0
 
-	if (instagram) {
-		for (let i = 0; i < instagram.length; i++) {
-			let post = instagram[i].caption
-				.split('\n')
-				.slice(0, 1)
-				.toString()
-				.slice(10)
-				.split(',')
-				.join('')
-			let postNum = parseInt(post)
-			if (typeof postNum != 'number' && postNum < 8000000) {
-				index++
+	// if (instagram) {
+	// 	for (let i = 0; i < instagram.length; i++) {
+	// 		let post = instagram[i].caption
+	// 			.split('\n')
+	// 			.slice(0, 1)
+	// 			.toString()
+	// 			.slice(10)
+	// 			.split(',')
+	// 			.join('')
+	// 		let postNum = parseInt(post)
+	// 		if (typeof postNum != 'number' && postNum < 8000000) {
+	// 			index++
 
-				break
-			}
-		}
-	}
+	// 			break
+	// 		}
+	// 	}
+	// }
 
 	return (
 		<section className={styles.hero} id='hero'>
@@ -82,7 +82,7 @@ const Hero = ({ research }) => {
 
 			<div className={styles.trackerContainer}>
 				<div className={styles.tracker}>
-					<div className={styles.trackerField}>
+					{/* <div className={styles.trackerField}>
 						{isPending && <p>Loading Last Closing..</p>}
 						{error && <p>Could not load data..</p>}
 						{instagram && (
@@ -110,7 +110,7 @@ const Hero = ({ research }) => {
 								</a>
 							</>
 						)}
-					</div>
+					</div> */}
 					<div className={styles.trackerField}>
 						<p>
 							<b>{research[0].fields.title}</b>
@@ -123,6 +123,15 @@ const Hero = ({ research }) => {
 						>
 							<p className='underlineButton'>MORE INFO</p>
 						</a>
+					</div>
+					<div className={styles.trackerField}>
+						<p>
+							<b>INDEX RATES</b>
+						</p>
+						<iframe
+							src='https://www.thefinancials.com/Widget.aspx?pid=HKS&wid=0344406736&style=tile_wide'
+							frameborder='0'
+						></iframe>
 					</div>
 				</div>
 			</div>
