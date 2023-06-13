@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Container from '../components/Container'
+import SectionTitle from '../components/SectionTitle'
 
 const Rates = () => {
 	return (
@@ -16,9 +17,11 @@ const Rates = () => {
 				/>
 				<link rel='icon' href='/favicon.jpg' />
 			</Head>
-			<section className={'section-dark '}>
+			<div className='top-background'></div>
+			<section>
 				<Container>
 					<div className='rates'>
+						<SectionTitle text='Index Rates' />
 						<iframe
 							id='rates'
 							src='https://www.thefinancials.com/Widget.aspx?pid=HKS&wid=0344406736&style=table_tall_graph'
