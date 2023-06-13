@@ -80,7 +80,7 @@ const Nav = () => {
 								<Link href='/#media' scroll={false} passHref>
 									<li onClick={() => closeMenu()}>Media</li>
 								</Link>
-								<Link href='/rates/#rates' scroll={false} passHref>
+								<Link href='/rates' scroll={false} passHref>
 									<li onClick={() => closeMenu()}>Index Rates</li>
 								</Link>
 								<Link href='/#careers' scroll={false} passHref>
