@@ -16,6 +16,7 @@ module.exports = {
 	env: {
 		space: process.env.CONTENTFUL_SPACE_ID,
 		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-		instagramToken: process.env.INSTAGRAM_TOKEN
+		instagramToken: process.env.INSTAGRAM_TOKEN,
+		googleAnalytics: process.env.GOOGLE_ANALYTICS
 	}
 }

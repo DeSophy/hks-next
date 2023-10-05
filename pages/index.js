@@ -78,6 +78,24 @@ export default function Home({
 					content='Real Estate, Capital Services, Investment Sales, New York City, Aquistion and Bridge, Permanent Finance, Mezanine and Private Equity'
 				/>
 				<link rel='icon' href='/favicon.jpg' />
+
+				<script
+					async
+					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+				/>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+					window.dataLayer = window.dataLayer || []; function gtag()
+					{dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', '${process.env.GOOGLE_ANALYTICS}',
+					{
+						page_path: window.location.pathname
+					});
+					`
+					}}
+				/>
 			</Head>
 
 			<Hero research={research} />
